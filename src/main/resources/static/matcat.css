@@ -1,38 +1,49 @@
 @charset "UTF-8";
 
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
 /* MATCAT 기본 배경 색*/
 html {
     background-color: #FBF9F1;
+    text-align: center;
 }
 /* MATCAT로고 색상*/
-.matcat-logoname {
-    color: #2A6938;  
+#matcat-logoname {
+    color: #2A6938; 
+    width: 80%; 
 }
-#home {  
-}
+
+
+/* -----------------------------헤더-----------------------------*/
 /* 맨위에 헤더  */
-.matcat-header {
-    width: 90%;
-    margin-left: 90px;
-    margin-top : 10px;
+#matcat-header {
+    width:90%;
+    margin-left: 5%;
+    margin-top : 1%;
     display: flex;
     justify-content: space-between;
 }
 /* 헤더 flex와 정렬 및 등등*/
-.header-nav {
+#header-nav {
     display: flex;
     list-style-type: none;
     text-transform: uppercase;
-    font-size: 1.25rem;
-    margin-top : 50px;
+    font-size: 18px;
+    margin-top : 4.5%;
+    margin-right: 130px;
 }
 /* 헤더 안에 li설정 ex.홈 상품목록 마이페이지 등등*/
-.header-nav li {
-    margin-right: 110px;
+#header-nav li {
+    
+    margin-right: 100px;
     margin-top: 10px;
 }
 /* 마우스오버시 색상 변경*/
-.header-nav a:hover {
+#header-nav a:hover {
     color: darkgrey;
 }
 /* <a> 밑에 있는 링크 밑줄 제거 */
@@ -40,3 +51,129 @@ a {
     text-decoration: none;
     color: black;
 }
+
+/* 검색창 길이 */
+#search-txt {
+    width: 150px;
+}
+
+/* 장바구니 로그인옆에 붙임*/
+#jangi {
+    margin-left: -100px;
+}
+
+/*-------------------------------body-------------------------------*/
+
+/* 메인페이지 사진*/
+#mainjpg {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* fixed기능 서브메뉴*/
+#submenu-fixed {
+    font-weight: bold;
+    width: 125px;
+    height: 180px;
+    position: fixed;
+    box-shadow: 0px 5px 3px 3px rgb(156, 156, 156);
+    border-radius: 20%;
+    align-items: center;
+    text-align: center;
+    left: 83%;
+    top: 200px;
+}
+
+
+
+
+
+/* 추천메뉴 전체 틀 */
+#body-bestmenu {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 15%;
+    
+}
+/* 추천메뉴 사진이랑 옵션들 전체 툴*/
+#bestmenu-picture {
+    
+    display: flex;
+    justify-content: space-between;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 8%;
+    font-size: 10px;
+    
+}
+/* 사진이랑 옵션 각각의 상세 툴*/
+#picture {
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+}
+/* 바로구매 / 카트에 추가하기 버튼 */
+#btn a{
+    font-size: 10px;
+    color: white;
+    background-color: #2B7C1E;
+    padding: 7px 15px;
+    border-radius: 15px;
+   
+  }
+
+
+  
+/* 가장많이팔리제품 전체 툴 */
+#body-manysellmenu {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 15%;
+    
+}
+/* 가장많이팔리제품 사진이랑 옵션들 전체 툴*/
+#manysellmenu-picture {
+    
+    display: flex;
+    justify-content: space-between;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 8%;
+    font-size: 10px;
+    
+}
+/* -------------------------footer--------------------------------*/
+/* footer부분*/
+#wrapper {
+    max-width: 1100px;
+    margin : 0 auto;
+    padding : 0 4%;
+}
+
+footer {
+    background-color:#2B7C1E;
+    text-align: center;
+    margin-top: -50px;
+    padding : 6px 0;
+}
+
+footer p {
+    color : white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
