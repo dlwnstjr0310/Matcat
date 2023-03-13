@@ -1,16 +1,17 @@
 #matcat {
-    width: 150px; 
-    height: 150px;
     margin-left: 30%;
+    width: 150px;
+    height: 150px;
 }
 
-html,
+html {
+    background-color: #000000;
+}
+
 body {
-    position: relative;
     width: 1440px;
     height: 1024px;
     background: #FBF9F1;
-    justify-content: center;
 }
 
 .regist_header {
@@ -26,40 +27,91 @@ body {
     font-weight: 400;
     font-size: 40px;
     line-height: 48px;
-    margin-left: 45%;
+    margin-left: 658px;
+    margin-top: 60px;
     color: #000000;
     opacity: 0.5;
 }
 
-.login_box {
+.login-container {
     width: 875px;
     height: 619px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    background-color: rgba(217,217,217,1);
-    opacity: 0.3;
+    background-color: #f3f0f0;
     box-shadow: 6px 10px 4px 0 rgba(0,0,0,0.25);
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.text {
+    font-size: 30px;
+    padding-right: 50px;
+    margin-bottom: 10px;
+}
+
+#loginForm {
     display: flex;
+    align-items: center;
+    padding: 20% 10% 5% 10%;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.text {
+    font-size: 30px;
+    padding-right: 50px;
+    margin-bottom: 10px;
+}
+
+.IDinsert {
+    width: 407px;
+    height: 35px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+.PWDinsert {
+    width: 407px;
+    height: 35px;
+    font-size: 1.5rem;
+}
+
+.insertid {
+    padding-bottom: 30px;
+}
+
+.btns button{
+    width: 118px;
+    height: 35px;
+    color: #000000;
+    background-color: #2B7C1E;
+    cursor: pointer;
+    margin-left: 27px;
+    margin-top: 40px;
+    border: solid 1px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+#regist{
+    margin-left: 0px;
+}
+
+#loginSubmit {
+    font-size: 1.5rem;
+    background-color: #2B7C1E;
+    width: 420px;
+    height: 35px;
+    padding: 0;
+    margin-top: 30px;
+    border: solid 1px;
+    border-radius: 10px;
+}
+
+#centerplz {
+    display: flex;
+    align-items: center;
+    padding: 20% 10% 5% 10%;
     justify-content: center;
 }
-
-.IDinsert{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    color: #000000;
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    margin-top: 100px;
-}
-
-.PWDinsert{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    color: #000000;
-    opacity: 1;
-    display: flex;
-    align-items: center;
-}
-
