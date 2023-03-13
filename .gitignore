@@ -34,11 +34,10 @@ build/
 ### VS Code ###
 .vscode/
 
-!/.idea/
-!/.mvn/
-!/HELP.md
-!/mvnw
-!/mvnw.cmd
+/.idea/
+/.mvn/
+/HELP.md
+/mvnw
+/mvnw.cmd
 /bin/
-=======
 
