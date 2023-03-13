@@ -36,3 +36,4 @@ build/
 !/HELP.md
 !/mvnw
 !/mvnw.cmd
+/bin/
