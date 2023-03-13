@@ -4,8 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UI_MAIN_003</title>
-    <link rel="stylesheet" href="../../../static/css/matcat.css">
+    <title>header</title>
+<style>
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* -----------------------------헤더-----------------------------*/
+/* 맨위에 헤더  */
+#matcat-header {
+    width:90%;
+    margin-left: 5%;
+    margin-top : 1%;
+    display: flex;
+    justify-content: space-between;
+}
+/* 헤더 flex와 정렬 및 등등*/
+#header-nav {
+    display: flex;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top : 4.5%;
+    margin-right: 130px;
+}
+/* 헤더 안에 li설정 ex.홈 상품목록 마이페이지 등등*/
+#header-nav li {
+    
+    margin-right: 100px;
+    margin-top: 10px;
+}
+/* 마우스오버시 색상 변경*/
+#header-nav a:hover {
+    color: darkgrey;
+}
+/* <a> 밑에 있는 링크 밑줄 제거 */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 검색창 길이 */
+#search-txt {
+    width: 150px;
+}
+
+/* 장바구니 로그인옆에 붙임*/
+#jangi {
+    margin-left: -100px;
+}
+
+
+</style>
+
     <!--  구글 웹 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +68,6 @@ integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd
 crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
     <div id="matcat">
         <header id="matcat-header">
         <h1><a id="matcat-logoname" href="UI_MAIN_001.html"><img src="../../../static/image/matcatlogo.png"></a></h1>
@@ -40,59 +90,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
             </ul>
         </nav>
         </header>
-
-        <div id="submenu-fixed">
-            <br>
-            <a>바로가기</a><br><br>
-            <a id="submypage" href="UI_MPG_001.html"><img src="../../../static/image/submypage.png"></a>
-            <a id="subjang" href="UI_MAIN_004.html"><img src="../../../static/image/subjang.png"></a> <br>
-            <a id="subhelp" href="UI_HELP_001.html"><img src="../../../static/image/subhelp.png"></a>
-            <a id="subhome" href="UI_MAIN_001.html"><img src="../../../static/image/subhome.png"></a>
-        </div>
-
-        <div id="searchfont">
-            <a>검색 결과</a>
-        </div>
-        <div id="search-box">
-            <form action="." method="post">
-              <input id="search-txt2" type="text" placeholder="검색...">
-              <button class="search-btn" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </form>
-          </div>
-
-          <div id="countmenu">
-            <ul id="menuoption">
-                <li>전체</li>
-                <li>출력</li>
-            </ul>
-            <ul id="menuoption">
-                <li>신상품</li>
-                <li>베스트 상품</li>
-                <li>높은 가격순</li>
-                <li>낮은 가격순</li>
-                <li>전체보기</li>
-            </ul>
-          </div>
-
-          <hr id="hr">
-
-
-
-
-
-    </div>
-    
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-
-<footer>
-    <div id="wrapper">
-        <p><small>&copy; 2023 by Mat Cat Powered by MATCAT Team</small></p>
-    </div>
-</footer>
 
 </body>
 </html>

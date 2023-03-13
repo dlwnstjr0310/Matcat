@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
+/* 구글 웹폰트 */
 * {
     font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
 }
 
 
@@ -10,10 +12,10 @@
 html {
     background-color: #FBF9F1;
     text-align: center;
+    
 }
 /* MATCAT로고 색상*/
-#matcat-logoname {
-    color: #2A6938; 
+#matcat-logoname { 
     width: 80%; 
 }
 
@@ -31,9 +33,8 @@ html {
 #header-nav {
     display: flex;
     list-style-type: none;
-    text-transform: uppercase;
     font-size: 18px;
-    margin-top : 4.5%;
+    margin-top : 3%;
     margin-right: 130px;
 }
 /* 헤더 안에 li설정 ex.홈 상품목록 마이페이지 등등*/
@@ -51,6 +52,10 @@ a {
     text-decoration: none;
     color: black;
 }
+
+/* 상품목록 */
+
+
 
 /* 검색창 길이 */
 #search-txt {
@@ -86,10 +91,6 @@ a {
     left: 83%;
     top: 200px;
 }
-
-
-
-
 
 /* 추천메뉴 전체 틀 */
 #body-bestmenu {
@@ -149,15 +150,17 @@ a {
 /* footer부분*/
 #wrapper {
     max-width: 1100px;
+    text-align: center;
     margin : 0 auto;
     padding : 0 4%;
 }
 
 footer {
+    
     background-color:#2B7C1E;
     text-align: center;
-    margin-top: -50px;
-    padding : 6px 0;
+    margin-top: 60px;
+    padding : 20px 0;
 }
 
 footer p {
@@ -166,14 +169,56 @@ footer p {
 
 
 
+/* 검색 페이지 */
+
+#searchfont {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2B7C1E;
+    padding: 30px 20px;
+    border-radius: 10px;
+    
+}
+
+#searchfont a{
+    color: white;
+    font-size: 2rem;
+    
+}
+
+#search-txt2 {
+    
+    margin-top: 20px;
+    width: 60%;
+    height: 35px;
+}
 
 
+#countmenu {
+    width:72%;
+    margin-left: 17%;
+    display: flex;
+    justify-content: space-between;
+}
 
+#menuoption {
+    display: flex;
+    list-style-type: none;
+    font-size: 18px;
+    margin-top : 2%;
+    margin-right: 130px;
+}
+#menuoption li {
+    margin-right: 20px;
+    
+}
 
-
-
-
-
-
-
-
+#hr {
+    border-style:double;
+    margin-top: 20px;
+    width: 62%;
+    margin-left: 19%;
+}
