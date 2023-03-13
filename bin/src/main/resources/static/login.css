@@ -1,0 +1,64 @@
+#matcat {
+    width: 150px; 
+    height: 150px;
+    margin-left: 30%;
+}
+
+html,
+body {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: #FBF9F1;
+    justify-content: center;
+}
+
+.regist_header {
+    display: flex;
+    margin-top: 80px;
+}
+
+.header_name {
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    margin-left: 45%;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.login_box {
+    width: 875px;
+    height: 619px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: rgba(217,217,217,1);
+    opacity: 0.3;
+    box-shadow: 6px 10px 4px 0 rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: center;
+}
+
+.IDinsert{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    color: #000000;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.PWDinsert{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    color: #000000;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+}
+

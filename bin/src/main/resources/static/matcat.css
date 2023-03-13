@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/* MATCAT 기본 배경 색*/
+html {
+    background-color: #FBF9F1;
+}
+/* MATCAT로고 색상*/
+.matcat-logoname {
+    color: #2A6938;  
+}
+#home {  
+}
+/* 맨위에 헤더  */
+.matcat-header {
+    width: 90%;
+    margin-left: 90px;
+    margin-top : 10px;
+    display: flex;
+    justify-content: space-between;
+}
+/* 헤더 flex와 정렬 및 등등*/
+.header-nav {
+    display: flex;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-top : 50px;
+}
+/* 헤더 안에 li설정 ex.홈 상품목록 마이페이지 등등*/
+.header-nav li {
+    margin-right: 110px;
+    margin-top: 10px;
+}
+/* 마우스오버시 색상 변경*/
+.header-nav a:hover {
+    color: darkgrey;
+}
+/* <a> 밑에 있는 링크 밑줄 제거 */
+a {
+    text-decoration: none;
+    color: black;
+}
