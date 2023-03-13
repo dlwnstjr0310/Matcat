@@ -17,7 +17,7 @@ spring:
       max-request-size: 10MB
       location: C:/semi/MATCAT
 
-# image upload directory conf\ig
+# image upload directory config
 image:
   image-dir: src/main/resources/upload/
 # mybatis config
