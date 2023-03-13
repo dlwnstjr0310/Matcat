@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/resource/static/js/order.js"></script>
+    <link rel="stylesheet" href="../../static/style.css">
+    <script>
+        const message = '[[${message}]]';
+	    message && alert(message);
+    </script>
+</head>
+<body>
+    <div th:replace="common/header.html"></div>
+    <section>
+        <div id="table-header">
+            <p>주문서<hr></p>
+        </div>
+        <table id="order-list">
+            <tbody>
+                <tr>
+                    <td><img src="/images/product/001.png" alt="상품1"></td>
+                    <td>[엄마손] 떡튀순 세트</td>
+                    <td>2개</td>
+                    <td>10,000원</td>
+                    <td>20,000원</td>      
+                </tr>
+                <tr>
+                    <td><img src="/images/product/002.png" alt="상품2"></td>
+                    <td>멍게비빔밥</td>
+                    <td>1개</td>
+                    <td>15,000원</td>
+                    <td>15,000원</td>
+                </tr>
+                <tr>
+                    <td><img src="/images/product/003.png" alt="상품3"></td>
+                    <td>장어덮밥과 군만두</td>
+                    <td>3개</td>
+                    <td>20,000원</td>
+                    <td>60,000원</td>
+                </tr>
+            </tbody>
+        </table>
+        <table id="total">
+            <tr>
+                <td>TOTAL</td>
+                <td id="total-price"></td>
+                <!-- 출력안됨... -->
+            </tr>
+        </table>
+    </section>
+    <section>
+        <form action="/order">
+            <div id="">
+                <p id="table-header">주문자 정보<hr></p>
+                <table id="infomation-form">
+                    <tr>
+                        <td>보내는 분</td>
+                        <td><input type="text" name="name" value="" required></td>
+                    </tr>
+                    <tr>
+                        <td>핸드폰</td>
+                        <td><input type="tel" name="phone" value="" required></td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td><input type="email" name="email" value="" required></td>
+                    </tr>
+                </table>
+                <p id="table-header">배송 정보<hr></p>
+                <table id="delivery-form">
+                    <tr>
+                        <td>받는분 주소</td>
+                        <td><input type="text" name="address1" value="" required></td>
+                        <td><input type="button" name="addressSearch" value="주소찾기"></button></td>
+                    </tr>
+                    <tr>
+                        <td id="address-pad"></td>
+                        <td><input type="text" name="address2"></td>
+                    </tr>
+                </table>
+            
+                
+            </div>
+        
+
+        </form>
+    </section>
+  
+
+
+</body>
+</html>
