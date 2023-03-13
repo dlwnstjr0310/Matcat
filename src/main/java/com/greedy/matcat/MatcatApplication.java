@@ -8,6 +8,7 @@ public class MatcatApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MatcatApplication.class, args);
+        /**/
     }
 
 }
