@@ -58,13 +58,14 @@ img{
 }
 
 #order-list td{
-    padding: 1em 4em;
+    padding: 2em 4em;
 }
 
 table {
     margin: auto;
     border-collapse: collapse;
     font-size: 0.7em;
+    padding-left: 50% 0px;
   }
   
 table td {
@@ -94,9 +95,12 @@ table img{
 
 
 /*--------- 주문자 정보 ---------*/
-#infomation-form{
-    flex: left;
-    margin-left: 15%;
+#infomation-form hr{
+    display: block; 
+}
+
+#infomation-form {
+    margin: 0em 2em;
 }
 
 #delivery-form{
@@ -108,6 +112,67 @@ table img{
     border-bottom: none;
 }
 
+.wrapper {
+    display: flex;
+}
+  
+.wrap-left, .wrap-right {
+    flex-basis: 50%;
+    height: 300px;
+    margin-right: 5%;
+}
+
+.wrap-left{
+    margin-right: 0%;
+}
+
+
+/*--------- 버튼 ---------*/
+.btn-flex button{
+    border: none;
+    background-color: #FBF9F1;
+}
+  
+.btn-flex{
+    margin: 3%;
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 100%;   
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
 /* 주소입력란 배경 삭제 */
 input[name="address1"]{
     border: none;
@@ -115,6 +180,10 @@ input[name="address1"]{
 }
 
 /*--------- 결제 정보 ---------*/
+.table-font-left{
+    text-align: left;
+}
+
 .payinfo{
     font-size: medium;
     margin: 3%;
@@ -135,6 +204,7 @@ input[name="address1"]{
 #total-pay td{
     color: red;
     font-weight: 900;
+    font-size: medium;
 }   
 
 .liblank{
