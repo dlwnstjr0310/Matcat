@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UI_MAIN_004-장바구니</title>
 
-    <!-- favicon -->
+<head>
+    <meta charset="utf-8">
+    <title>템플릿 수정수정~~~장바구니 </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
-    <link href="/resources/lib/owlcarousel/owl.carousel.min.js" rel="stylesheet">
+<!-- 폰트 이따가 수정하기!!!!!!! -->    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="/resources/static/css/shopping_cart.css" rel="stylesheet">    
+    <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- 장바구니 네모 시작-->
-    <div id="cartnemo" style="width: 1043px; height: 113px; position: absolute; left: 213px; top: 208px; border-radius: 10px; background: #2b7c1e;">
-    </div>
-    <p style="position: absolute; left: 655px; top: 240px; font-size: 40px; font-weight: 700; text-align: center; color: #fff;">
-        장바구니
-    </p>
 
 
-    <!-- 장바구니 네모 끝-->
-
-    <!-- CART 시작!-->
-    <div id="container-fluid pt-5">
+    <!-- Cart Start -->
+    <div class="container-fluid pt-5">
         <div class="row px-xl-5">
             <div class="col-lg-8 table-responsive mb-5">
-
-                <!--장바구니 테이블 시작 -->
+                <!-- 카트 테이블 시작 -->
                 <table class="table table-bordered text-center mb-0">
                     <thead class="bg-secondary text-dark">
                         <tr>
-                            <th>상품</th>
-                            <th>가격</th>
-                            <th>수량</th>
-                            <th>구매금액</th>
-                            <th>삭제</th>
+                            <th>Products</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Remove</th>
                         </tr>
                     </thead>
                     <tbody class="align-middle">
@@ -50,7 +53,7 @@
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
                                         <button class="btn btn-sm btn-primary btn-minus" >
-                                        <i class="fa fa-minus"></i>
+                                            <i class="fa fa-minus"></i>
                                         </button>
                                     </div>
                                     <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
@@ -71,7 +74,7 @@
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
                                         <button class="btn btn-sm btn-primary btn-minus" >
-                                        <i class="fa fa-minus"></i>
+                                            <i class="fa fa-minus"></i>
                                         </button>
                                     </div>
                                     <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
@@ -92,7 +95,7 @@
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
                                         <button class="btn btn-sm btn-primary btn-minus" >
-                                        <i class="fa fa-minus"></i>
+                                            <i class="fa fa-minus"></i>
                                         </button>
                                     </div>
                                     <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
@@ -113,7 +116,7 @@
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
                                         <button class="btn btn-sm btn-primary btn-minus" >
-                                        <i class="fa fa-minus"></i>
+                                            <i class="fa fa-minus"></i>
                                         </button>
                                     </div>
                                     <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
@@ -134,7 +137,7 @@
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
                                         <button class="btn btn-sm btn-primary btn-minus" >
-                                        <i class="fa fa-minus"></i>
+                                            <i class="fa fa-minus"></i>
                                         </button>
                                     </div>
                                     <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
@@ -150,8 +153,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <!-- 장바구니 테이블 끝 -->
-                
+                <!-- 카트 테이블 끝 -->
             </div>
             <div class="col-lg-4">
                 <div class="card border-secondary mb-5">
@@ -164,21 +166,38 @@
                             <h6 class="font-weight-medium">$150</h6>
                         </div>
                         <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-medium">배송료</h6>
-                            <h6 class="font-weight-medium">\3,000</h6>
+                            <h6 class="font-weight-medium">Shipping</h6>
+                            <h6 class="font-weight-medium">$10</h6>
                         </div>
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
-                            <h5 class="font-weight-bold">총 결제 금액</h5>
-                            <h5 class="font-weight-bold">\800,000</h5>
+                            <h5 class="font-weight-bold">Total</h5>
+                            <h5 class="font-weight-bold">$160</h5>
                         </div>
-                        <button class="btn btn-block btn-primary my-3 py-3">결제하기</button>
+                        <button class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Cart End -->
+
+
+    
+    <!-- Back to Top(위로 올라가기) -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
