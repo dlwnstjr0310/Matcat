@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>템플릿 수정수정~~~장바구니 </title>
+    <title>장바구니 페이지!</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="/src/main/resources/static/image/EH_favicon.ico" rel="icon">
 
    
     <!-- Fonts -->
@@ -21,18 +21,16 @@
 
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/src/main/resources/static/lib/owlcarousel/EH_owl.carousel.min.js" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/src/main/resources/static/EH_css_shoppingcart.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- 장바구니 박스 시작 -->
     <div id="cartbox">
-        <!-- style="width: 1043px; height: 113px; position: absolute; left: 213px; top: 20px; border-radius: 10px; background: #2b7c1e; color: white; font-size: xxx-large; text-align: center;" -->
     장바구니</div>
-
     <!-- 장바구니 박스 끝-->
  
 
@@ -52,7 +50,7 @@
                     </thead>
                     <tbody class="align-middle">
                         <tr>
-                            <td class="align-middle"><img src="img/budae.jpg" alt="" style="width: 50px;"> 스팸듬뿍 부대찌개</td>
+                            <td class="align-middle"><img src="/src/main/resources/static/image/EH_budae.jpg" alt="" style="width: 50px;"> 스팸듬뿍 부대찌개</td>
                             <td class="align-middle">9,000원</td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
@@ -72,7 +70,7 @@
                             <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
                         </tr>
                         <tr>
-                            <td class="align-middle"><img src="img/munggaebibim.png" alt="" style="width: 50px;"> 멍게비빔밥</td>
+                            <td class="align-middle"><img src="/src/main/resources/static/image/EH_munggaebibim.png" alt="" style="width: 50px;"> 멍게비빔밥</td>
                             <td class="align-middle">15,000원</td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
@@ -92,7 +90,7 @@
                             <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
                         </tr>
                         <tr>
-                            <td class="align-middle"><img src="img/wkddj.png" alt="" style="width: 50px;"> 장어덮밥과 군만두</td>
+                            <td class="align-middle"><img src="/src/main/resources/static/image/EH_wkddj.png" alt="" style="width: 50px;"> 장어덮밥과 군만두</td>
                             <td class="align-middle">20,000원</td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
@@ -111,50 +109,14 @@
                             </td>
                             <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
                         </tr>
-                        <!-- <tr>
-                            <td class="align-middle"><img src="img/product-4.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle">
-                                <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus" >
-                                            <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td class="align-middle"><img src="img/product-5.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle">
-                                <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus" >
-                                            <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
-                        </tr> -->
                     </tbody>
                 </table>
                 <!-- 카트 테이블 끝 -->
             </div>
+
+
+
+
             <div class="col-lg-4">
                 <div class="card border-secondary mb-5">
                     <div class="card-header bg-secondary border-0">
@@ -199,12 +161,12 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/src/main/resources/static/lib/EH_easing/easing.min.js"></script>
+    <script src="/src/main/resources/static/lib/owlcarousel/owl.carousel.min.js"></script>
 
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="/src/main/resources/static/js/EH_cart.js"></script>
 </body>
 
 </html>
