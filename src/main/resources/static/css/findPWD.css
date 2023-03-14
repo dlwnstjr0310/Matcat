@@ -55,7 +55,7 @@ body {
     justify-content: center;
 }
 
-#findId {
+#findPWD {
     display: flex;
     align-items: center;
     padding: 20% 10% 5% 10%;
@@ -86,7 +86,7 @@ tr td {
     height: 35px;
 }
 
-#findMyId {
+#findMyPWD {
     width: 407px;
     height: 35px;
     color: #000000;

@@ -107,3 +107,7 @@ body {
     padding: 10% 10% 5% 10%;
     justify-content: center;
 }
+
+input {
+    font-size: 20px;
+}
