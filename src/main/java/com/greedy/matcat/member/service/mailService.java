@@ -2,7 +2,7 @@ package com.greedy.matcat.member.service;
 
 import com.greedy.matcat.member.dto.MailDTO;
 
-public interface MemberService {
+public interface mailService {
 
     MailDTO createMailAndChangePassword(String str);
 

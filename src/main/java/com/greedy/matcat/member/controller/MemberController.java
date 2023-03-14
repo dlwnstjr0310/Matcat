@@ -2,7 +2,7 @@ package com.greedy.matcat.member.controller;
 
 import com.greedy.matcat.member.dto.MailDTO;
 import com.greedy.matcat.member.dto.MemberDTO;
-import com.greedy.matcat.member.service.MemberService;
+import com.greedy.matcat.member.service.mailService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,12 +20,12 @@ public class MemberController {
     @Value("${spring.mail.username}")
     private String from;
 
-    private final MemberService memberService;
+    private final mailService mailService;
 
     @Autowired
-    public MemberController(JavaMailSender javaMailSender, MemberService memberService) {
+    public MemberController(JavaMailSender javaMailSender, mailService mailService) {
         this.javaMailSender = javaMailSender;
-        this.memberService = memberService;
+        this.mailService = mailService;
     }
 
 
@@ -51,8 +51,8 @@ public class MemberController {
 
     @PostMapping("hello")
     public String hello(@RequestParam(required = false) String Email) {
-        MailDTO mail = memberService.createMailAndChangePassword(Email);
-        memberService.mailSend(mail);
+        MailDTO mail = mailService.createMailAndChangePassword(Email);
+        mailService.mailSend(mail);
         log.info("hello : {} " , mail);
         return "/member/login";
     }

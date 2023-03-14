@@ -6,11 +6,11 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MemberServiceImpl implements MemberService{
+public class mailServiceImpl implements mailService {
 
     private final JavaMailSenderImpl mailSender;
 
-    public MemberServiceImpl(JavaMailSenderImpl mailSender) {
+    public mailServiceImpl(JavaMailSenderImpl mailSender) {
         this.mailSender = mailSender;
     }
 
