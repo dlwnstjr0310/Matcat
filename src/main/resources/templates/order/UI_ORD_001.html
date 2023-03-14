@@ -51,12 +51,12 @@
         </table>
     </section>
     <section>
-        <form action="/order">
+        <form action="/order" method="POST">
             <div id="">
                 <p class="tableheader">주문자 정보<hr></p>
                 <table id="infomation-form">
                     <tr>
-                        <td>보내는 분</td>
+                        <td>수령자</td>
                         <td><input type="text" name="name" value="" required></td>
                     </tr>
                     <tr>
@@ -69,17 +69,20 @@
                     </tr>
                 </table>
                 <p class="tableheader">배송 정보<hr></p>
-                <table id="delivery-form">
-                    <tr>
-                        <td>받는분 주소</td>
-                        <td><input type="text" name="address1" value="" required></td>
-                        <td><input type="button" name="addressSearch" value="주소찾기"></button></td>
-                    </tr>
-                    <tr>
-                        <td id="address-pad"></td>
-                        <td><input type="text" name="address2"></td>
-                    </tr>
-                </table>
+                <form action="del">
+                    <table id="delivery-form">
+                        <!-- 기본값으로 주소 입력되도록 -->
+                        <tr>
+                            <td>받는분 주소</td>
+                            <td><input type="text" name="address1" value="" required></td>
+                            <td><input type="button" name="addressSearch" value="주소찾기"></button></td>
+                        </tr>
+                        <tr>
+                            <td id="address-pad"></td>
+                            <td><input type="text" name="address2"></td>
+                        </tr>
+                    </table>
+                </form>
                 <p class="tableheader">결제 정보<hr></p>
                 <table class="payinfo">
                     <tr>
@@ -104,22 +107,35 @@
                         <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
                     </ul>
                     <hr>
-                    <div>
-                        결제수단 선택 
-                        <button class="paymethod" type="button" name="kakao">
+                    <div class="paymethod">
+                        <span>결제수단 선택 </span> 
+                        <button type="button" name="kakao">
                             <img src="../../static/image/kakao.png" alt="kakao">
                         </button>
-                        <input class="paymethod" id="paymeth" type="button" name="credit" value="카드결제">
+                        <button type="button" name="credit">
+                            <img src="../../static/image/카드결제.png" alt="credit">
+                        </button>
+                    </div>
+                    <p class="p-font-small">
+                        ※ 결제하신 수단으로만 환불되는 점 유의하여 주시기 바랍니다. 
+                    </p>
+                    <p class="tableheader">개인정보 수집/제공<hr></p>
+                    <div class="agree">
+                        <input type="checkbox" name="agree_privacy_policy1" value="" required> 개인정보 수집·이용 및 처리 동의 
+                        <a href="http://localhost:8080/order/policy" > (<span>보기</span>) </a><br>
+                        <input type="checkbox" name="agree_privacy_policy2" value="" required> 전자지급 결제대행 서비스 이용약관 동의
+                        <a href="http://localhost:8080/order/policy" target="_blank">(<span>보기</span>)</a><br>
+                        <p>
+                            위 내용을 확인하였으며 결제에 동의합니다. 
+                        </p> 
                     </div>
                 </div>
-                
             </div>
-        
-
+            <input type="submit" class="btn-pay" value="${amount}원 결제하기">
         </form> 
     </section>
   
 
-
+    <div th:replace="common/footer.html"></div>
 </body>
 </html>

@@ -1,29 +1,106 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UI-MAIN-001</title>
-    <link rel="stylesheet" href="../../static/style.css">
+    <script src="/resource/static/js/order.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/style-002.css">
+    <!-- <script>
+        const message = '[[${message}]]';
+	    message && alert(message);
+    </script> -->
 </head>
+
 <body>
-    <div id="home" class="matcat">
-        <header class="matcat-header">
-        <h1><a class="matcat-logoname" href="UI-MAIN-001.html"><img src="/images/matcatLogo.png" width="80%"></a></h1>
-        <nav>
-            <ul class="header-nav">
-                <li><a href="UI-MAIN-001.html">홈</a></li>
-                <li><a href="">상품목록</a></li>
-                <li><a href="고객센터.html">고객센터</a></li>
-                <li><a href="마이페이지.html">마이페이지</a></li>
-                <li><a href="검색.html">검색</a></li>
-                <li><a href="로그인.html">로그인</a></li>
-                <li><a href="장바구니.html">장바구니</a></li>
-            </ul>
-        </nav>
-        </header> 
+    <div th:replace="common/header.html"></div>
+    <div>
+        <p class="tableheader">주문 완료<hr></p>
+        <table id="order-list">
+            <tbody>
+                <tr th:each="order: ${order}">
+                    <td><img src="/images/product/001.png" alt="상품1"></td>
+                    <td>[엄마손] 떡튀순 세트</td>
+                    <td>2개</td>
+                    <td>10,000원</td>
+                    <td>20,000원</td>      
+                </tr>
+                <tr>
+                    <td><img src="/images/product/002.png" alt="상품2"></td>
+                    <td>멍게비빔밥</td>
+                    <td>1개</td>
+                    <td>15,000원</td>
+                    <td>15,000원</td>
+                </tr>
+                <tr>
+                    <td><img src="/images/product/003.png" alt="상품3"></td>
+                    <td>장어덮밥과 군만두</td>
+                    <td>3개</td>
+                    <td>20,000원</td>
+                    <td>60,000원</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    
+    <div class="wrapper">
+        <div id="infomation-form" class="wrap-left">
+            <p class="tableheader">주문자 정보<hr></p>
+            <table>
+                <tr>
+                    <td class="table-font-left">수령자</td>
+                    <td th:text="${order.name}"></td>
+                </tr>
+                <tr>
+                    <td class="table-font-left">핸드폰</td>
+                    <td th:text="${order.phone}"></td>
+                </tr>
+                <tr>
+                    <td class="table-font-left">이메일</td>
+                    <td th:text="${order.email}"></td>
+                </tr>
+                <tr>
+                    <td class="table-font-left">받는분 주소</td>
+                    <td th:text="${order.address1}"></td>
+                </tr>
+                <tr>
+                    <td th:text="${order.address2}"></td>
+                </tr>
+                <tr>
+                    <td class="table-font-left">결제 수단</td>
+                    <td th:text="${order.payMethod}"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="wrap-right">
+            <p class="tableheader">주문 금액<hr></p>
+            <table>
+                <tr>
+                    <td class="table-font-left">상품 금액</td>
+                    <td th:text="${order.price}"></td>
+                </tr>
+                <tr>
+                    <td class="table-font-left">할인 금액</td>
+                    <td th:text="${order.discount}"></td>
+                </tr>
+                <tr>
+                    <td class="table-font-left">배송비</td>
+                    <td th:text="${order.delPrice}"></td>
+                </tr>
+                <tr id="total-pay">
+                    <td class="table-font-left">합계</td>
+                    <td th:text="${order.amount}"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="btn-flex">
+        <form action="/order" method="get">
+            <button><img src="../../static/image/btn-order-search.png" alt="주문조회"></button>
+            <button><img src="../../static/image/이전으로.png" alt="이전으로"></button>
+        </form>
+    </div>
+    <div th:replace="common/footer.html"></div>
 </body>
 </html>
