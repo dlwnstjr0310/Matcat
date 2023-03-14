@@ -8,6 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/member")
 public class MemberController {
 
-    @GetMapping("/UI_JOIN_001")
-    public void UI_JOIN_001() {}
+    @GetMapping("/login")
+    public void login() {
+    }
+
+    @GetMapping("/regist")
+    public void regist() {
+    }
+
+    @GetMapping("/findId")
+    public void findId() {
+    }
+
+    @GetMapping("/findPWD")
+    public void findPWD(){}
 }
