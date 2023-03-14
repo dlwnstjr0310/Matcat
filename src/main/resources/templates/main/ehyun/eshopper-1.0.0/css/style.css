@@ -444,6 +444,11 @@ hr {
   }
 }
 
+.form-control-sm, .form-control-lg {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 
 .form-control-sm {
   height: calc(1.5em + 0.5rem + 2px);
