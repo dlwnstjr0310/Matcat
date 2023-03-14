@@ -11,13 +11,14 @@
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
-<!-- 폰트 이따가 수정하기!!!!!!! -->    
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+   
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -27,8 +28,13 @@
 </head>
 
 <body>
+    <!-- 장바구니 박스 시작 -->
+    <div id="cartbox">
+        <!-- style="width: 1043px; height: 113px; position: absolute; left: 213px; top: 20px; border-radius: 10px; background: #2b7c1e; color: white; font-size: xxx-large; text-align: center;" -->
+    장바구니</div>
 
-
+    <!-- 장바구니 박스 끝-->
+ 
 
     <!-- Cart Start -->
     <div class="container-fluid pt-5">
@@ -38,17 +44,16 @@
                 <table class="table table-bordered text-center mb-0">
                     <thead class="bg-secondary text-dark">
                         <tr>
-                            <th>Products</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Remove</th>
+                            <th>상품명</th>
+                            <th>가격</th>
+                            <th>수량</th>
+                            <th>삭제</th>
                         </tr>
                     </thead>
                     <tbody class="align-middle">
                         <tr>
-                            <td class="align-middle"><img src="img/product-1.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
-                            <td class="align-middle">$150</td>
+                            <td class="align-middle"><img src="img/budae.jpg" alt="" style="width: 50px;"> 스팸듬뿍 부대찌개</td>
+                            <td class="align-middle">9,000원</td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
@@ -64,12 +69,11 @@
                                     </div>
                                 </div>
                             </td>
-                            <td class="align-middle">$150</td>
                             <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
                         </tr>
                         <tr>
-                            <td class="align-middle"><img src="img/product-2.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
-                            <td class="align-middle">$150</td>
+                            <td class="align-middle"><img src="img/munggaebibim.png" alt="" style="width: 50px;"> 멍게비빔밥</td>
+                            <td class="align-middle">15,000원</td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
@@ -85,12 +89,11 @@
                                     </div>
                                 </div>
                             </td>
-                            <td class="align-middle">$150</td>
                             <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
                         </tr>
                         <tr>
-                            <td class="align-middle"><img src="img/product-3.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
-                            <td class="align-middle">$150</td>
+                            <td class="align-middle"><img src="img/wkddj.png" alt="" style="width: 50px;"> 장어덮밥과 군만두</td>
+                            <td class="align-middle">20,000원</td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
@@ -106,10 +109,9 @@
                                     </div>
                                 </div>
                             </td>
-                            <td class="align-middle">$150</td>
                             <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td class="align-middle"><img src="img/product-4.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
                             <td class="align-middle">$150</td>
                             <td class="align-middle">
@@ -127,7 +129,6 @@
                                     </div>
                                 </div>
                             </td>
-                            <td class="align-middle">$150</td>
                             <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
                         </tr>
                         <tr>
@@ -148,9 +149,8 @@
                                     </div>
                                 </div>
                             </td>
-                            <td class="align-middle">$150</td>
                             <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
                 <!-- 카트 테이블 끝 -->
@@ -158,24 +158,31 @@
             <div class="col-lg-4">
                 <div class="card border-secondary mb-5">
                     <div class="card-header bg-secondary border-0">
-                        <h4 class="font-weight-semi-bold m-0">Cart Summary</h4>
+                        <h4 class="font-weight-semi-bold m-0">배송지</h4>
+                    </div>
+                    <div class="card-body">
+                        <h6><b>배송지를 등록</b>하고<br>구매가능한 상품을 확인하세요!</h6>
+                        <button class="delivery-add">주소 검색</button>
+                    </div>
+                    <div class="card-header bg-secondary border-0">
+                        <h4 class="font-weight-semi-bold m-0">결제금액</h4>
                     </div>
                     <div class="card-body">
                         <div class="d-flex justify-content-between mb-3 pt-1">
-                            <h6 class="font-weight-medium">Subtotal</h6>
-                            <h6 class="font-weight-medium">$150</h6>
+                            <h6 class="font-weight-medium">상품금액</h6>
+                            <h6 class="font-weight-medium">44,000원</h6>
                         </div>
                         <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-medium">Shipping</h6>
-                            <h6 class="font-weight-medium">$10</h6>
+                            <h6 class="font-weight-medium">배송비</h6>
+                            <h6 class="font-weight-medium">3,000원</h6>
                         </div>
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
-                            <h5 class="font-weight-bold">Total</h5>
-                            <h5 class="font-weight-bold">$160</h5>
+                            <h5 class="font-weight-bold">결제 예정 금액</h5>
+                            <h5 class="font-weight-bold">47,000원</h5>
                         </div>
-                        <button class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</button>
+                        <button class="btn btn-block btn-primary my-3 py-3">주문하기</button>
                     </div>
                 </div>
             </div>

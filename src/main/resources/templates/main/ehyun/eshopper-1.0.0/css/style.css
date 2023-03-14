@@ -5,36 +5,14 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-:root {
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #D19C97;
-  --secondary: #EDF1FF;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #FFFFFF;
-  --dark: #1C1C1C;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Poppins", sans-serif;
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+
 }
+
+
 
 *,
 *::before,
@@ -42,11 +20,13 @@
   box-sizing: border-box;
 }
 
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: FBF9F1;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -341,6 +321,18 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+#cartbox{
+  width: 1043px; 
+  height: 113px; 
+  position: absolute; 
+  left: 213px; 
+  top: 20px; 
+  border-radius: 10px; 
+  background: #2b7c1e; 
+  color: white; 
+  font-size: xxx-large; 
+  text-align: center;
+}
 
 
 
@@ -351,6 +343,7 @@ hr {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: auto;
 }
 
 .row {
@@ -393,11 +386,6 @@ hr {
     max-width: 66.66667%;
   }
 }
-
-  
-  
-
-
 
 .table {
   width: 100%;
@@ -512,22 +500,24 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #212529;
-  background-color: #D19C97;
-  border-color: #D19C97;
+  color: #FFFFFF;
+  font-size: x-large;
+  background-color: #2B7C1E;
+  border-color: #2B7C1E;
+  border-radius: 10px;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #c5837c;
-  border-color: #c17a74;
+  background-color: #15420e;
+  border-color: #15420e;
 }
 
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #c5837c;
-  border-color: #c17a74;
-  box-shadow: 0 0 0 0.2rem rgba(183, 138, 135, 0.5);
+  background-color: #15420e;
+  border-color: #15420e;
+  box-shadow: 0 0 0 0.2rem rgba(149, 183, 135, 0.5);
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
@@ -857,7 +847,7 @@ input[type="button"].btn-block {
 }
 
 .bg-secondary {
-  background-color: #EDF1FF !important;
+  /* background-color: #EDF1FF !important; */
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -889,231 +879,6 @@ button.bg-secondary:focus {
   justify-content: space-between !important;
 }
 
-  
-.float-left {
-  float: left !important;
-}
-
-.float-right {
-  float: right !important;
-}
-
-.float-none {
-  float: none !important;
-}
-
-@media (min-width: 576px) {
-  .float-sm-left {
-    float: left !important;
-  }
-  .float-sm-right {
-    float: right !important;
-  }
-  .float-sm-none {
-    float: none !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .float-md-left {
-    float: left !important;
-  }
-  .float-md-right {
-    float: right !important;
-  }
-  .float-md-none {
-    float: none !important;
-  }
-}
-
-@media (min-width: 992px) {
-  .float-lg-left {
-    float: left !important;
-  }
-  .float-lg-right {
-    float: right !important;
-  }
-  .float-lg-none {
-    float: none !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .float-xl-left {
-    float: left !important;
-  }
-  .float-xl-right {
-    float: right !important;
-  }
-  .float-xl-none {
-    float: none !important;
-  }
-}
-
-.user-select-all {
-  user-select: all !important;
-}
-
-.user-select-auto {
-  user-select: auto !important;
-}
-
-.user-select-none {
-  user-select: none !important;
-}
-
-.overflow-auto {
-  overflow: auto !important;
-}
-
-.overflow-hidden {
-  overflow: hidden !important;
-}
-
-.position-static {
-  position: static !important;
-}
-
-.position-relative {
-  position: relative !important;
-}
-
-.position-absolute {
-  position: absolute !important;
-}
-
-.position-fixed {
-  position: fixed !important;
-}
-
-.position-sticky {
-  position: sticky !important;
-}
-
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-
-.fixed-bottom {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1030;
-}
-
-@supports (position: sticky) {
-  .sticky-top {
-    position: sticky;
-    top: 0;
-    z-index: 1020;
-  }
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.sr-only-focusable:active, .sr-only-focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-}
-
-.shadow-sm {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-}
-
-.shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
-
-.shadow-lg {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-}
-
-.shadow-none {
-  box-shadow: none !important;
-}
-
-.w-25 {
-  width: 25% !important;
-}
-
-.w-50 {
-  width: 50% !important;
-}
-
-.w-75 {
-  width: 75% !important;
-}
-
-.w-100 {
-  width: 100% !important;
-}
-
-.w-auto {
-  width: auto !important;
-}
-
-.h-25 {
-  height: 25% !important;
-}
-
-.h-50 {
-  height: 50% !important;
-}
-
-.h-75 {
-  height: 75% !important;
-}
-
-.h-100 {
-  height: 100% !important;
-}
-
-.h-auto {
-  height: auto !important;
-}
-
-.mw-100 {
-  max-width: 100% !important;
-}
-
-.mh-100 {
-  max-height: 100% !important;
-}
-
-.min-vw-100 {
-  min-width: 100vw !important;
-}
-
-.min-vh-100 {
-  min-height: 100vh !important;
-}
-
-.vw-100 {
-  width: 100vw !important;
-}
-
-.vh-100 {
-  height: 100vh !important;
-}
 
 .m-0 {
   margin: 0 !important;
@@ -1385,7 +1150,7 @@ button.bg-secondary:focus {
 
 .pt-5,
 .py-5 {
-  padding-top: 3rem !important;
+  padding-top: 200px !important;
 }
 
 .pr-5,
@@ -3154,6 +2919,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .font-weight-semi-bold {
+  text-align: center;
   font-weight: 600;
 }
 
@@ -3174,3 +2940,10 @@ a.text-dark:hover, a.text-dark:focus {
   animation: action 1s infinite alternate;
 }
 
+/* 추가 */
+  /* 배송지 입력 */
+  .delivery-add {
+    padding-left: 20%;
+    padding-right: 20%;
+
+  }
