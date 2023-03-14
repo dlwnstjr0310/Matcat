@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/resource/static/js/order.js"></script>
-    <link rel="stylesheet" href="../../static/style.css">
-    <script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <!-- <script>
         const message = '[[${message}]]';
 	    message && alert(message);
-    </script>
+    </script> -->
 </head>
 <body>
     <div th:replace="common/header.html"></div>
     <section>
-        <div id="table-header">
-            <p>주문서<hr></p>
-        </div>
+        <p class="tableheader">주문서<hr></p>
         <table id="order-list">
             <tbody>
                 <tr>
@@ -53,7 +53,7 @@
     <section>
         <form action="/order">
             <div id="">
-                <p id="table-header">주문자 정보<hr></p>
+                <p class="tableheader">주문자 정보<hr></p>
                 <table id="infomation-form">
                     <tr>
                         <td>보내는 분</td>
@@ -68,7 +68,7 @@
                         <td><input type="email" name="email" value="" required></td>
                     </tr>
                 </table>
-                <p id="table-header">배송 정보<hr></p>
+                <p class="tableheader">배송 정보<hr></p>
                 <table id="delivery-form">
                     <tr>
                         <td>받는분 주소</td>
@@ -80,12 +80,43 @@
                         <td><input type="text" name="address2"></td>
                     </tr>
                 </table>
-            
+                <p class="tableheader">결제 정보<hr></p>
+                <table class="payinfo">
+                    <tr>
+                        <td class="payhead">상품 금액</td>
+                        <td>82,000원</td>
+                    </tr>
+                    <tr>
+                        <td class="payhead">상품 할인 금액</td>
+                        <td>0원</td>
+                    </tr>
+                    <tr>
+                        <td class="payhead">배송비</td>
+                        <td>0원</td>
+                    </tr>
+                    <tr id="total-pay">
+                        <td class="payhead">최종 결제 금액</td>
+                        <td>82,000원</td>
+                    </tr>
+                </table>
+                <div>
+                    <ul class="liblank">
+                        <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    </ul>
+                    <hr>
+                    <div>
+                        결제수단 선택 
+                        <button class="paymethod" type="button" name="kakao">
+                            <img src="../../static/image/kakao.png" alt="kakao">
+                        </button>
+                        <input class="paymethod" id="paymeth" type="button" name="credit" value="카드결제">
+                    </div>
+                </div>
                 
             </div>
         
 
-        </form>
+        </form> 
     </section>
   
 
