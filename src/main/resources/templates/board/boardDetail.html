@@ -33,38 +33,42 @@
             <hr class="border border-success">
             <div class="d-flex flex-wrap justify-content-around row-cols-auto">
                 <div class="col-1 text-center">no</div>
-                <div class="col-9 text-center">제목</div>
-                <div class="col-2 text-center">문의 날짜</div>
+                <div class="col-8 text-center">제목</div>
+                <div class="col-2 text-center">날짜</div>
+                <div class="col-1 text-center">닉네임</div>
             </div>
             <hr class="border border-success">
             <!-- 부트스트랩 success 색상으로 할지, css로 색상 먹일지 고민중 -->
             <th:block th:each="board : ${ boardList }">
                 <div class="d-flex flex-wrap justify-content-around row-cols-auto"
                     th:onclick="|location.href='/board/detail?no=${board.no}'|">
-                    <div class="col-1 text-center">${ no }</div>
-                    <div class="col-9 text-center">${ 제목 }</div>
-                    <div class="col-2 text-center">${ 문의 날짜 }</div>
+                    <div class="col-1 text-center" th:text="${ board.no }">${ no }</div>
+                    <div class="col-8 text-center" th:text="${ board.title}">${ 제목 }</div>
+                    <div class="col-2 text-center" th:text="${ board.date }">${ 날짜 }</div>
+                    <div class="col-1 text-center" th:text="${ board.writer.nickname }">${ 닉네임 }</div>"
                 </div>
                 <hr>
             </th:block>
             <div class="d-flex flex-wrap justify-content-around row-cols-auto"
                 th:onclick="|location.href='/board/detail?no=${board.no}'|">
-                <div tesreadonly th:text="${ board.body }"> ${ board.body }<br> ~~~ blarblar<br>
+                <div readonly th:text="${ board.body }"> ${ board.body }<br> ~~~ blarblar<br>
                     img파일 어떻게 가져오게 할지 공부 필요함;</div>
             </div>
             <hr class="border border-success">
             <div class="d-flex flex-wrap justify-content-around row-cols-auto">
                 <div class="col-1 text-center">no</div>
-                <div class="col-9 text-center">내용</div>
+                <div class="col-8 text-center">제목</div>
                 <div class="col-2 text-center">날짜</div>
+                <div class="col-1 text-center">닉네임</div>
             </div>
             <hr class="border border-success">
             <th:block th:each="reply : ${ replyList }">
                 <div class="d-flex flex-wrap justify-content-around row-cols-auto"
                     th:onclick="|location.href='/board/detail?no=${reply.no}'|">
                     <div class="col-1 text-center">${ no }</div>
-                    <div class="col-9 text-center">${ 내용 }</div>
+                    <div class="col-8 text-center">${ 내용 }</div>
                     <div class="col-2 text-center">${ 날짜 }</div>
+                    <div class="col-1 text-center">${ 닉네임 }</div>
                 </div>
                 <button id="removeReplbtn" th:onclick="removeReply([[${reply.no}]])"
                     class="btn btn-success">삭제</button><br>

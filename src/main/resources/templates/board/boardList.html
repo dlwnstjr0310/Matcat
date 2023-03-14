@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>adminhelp001</title>
+    <title>boardList</title>
     <link rel="stylesheet" href="../../static/css/matcat.css">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -18,28 +18,32 @@
 
 
 <!-- 폰트 구해서 나중에 추가하면서 폰트 사이즈 수정 필요-->
-<!-- boardList에서 변수처리로 다 끌어올 수 있으면 나중에 지울 페이지 -->
+
 <body>
+    <!-- 해당 부분도 변수를 주고 게시판 카테고리를 주면 맞는 값을 가져올 수 있는지? -->
     <div id="helphead" class="row rounded">
         <h1 class="text-light text-center m-3">공 지 사 항</h1>
     </div>
+    <!---------------------------------------------------------------------------->
     <div>
         <div id="html"></div>
         <div id="allthing">
             <hr class="border border-success">
             <div class="d-flex flex-wrap justify-content-around row-cols-auto">
                 <div class="col-1 text-center">no</div>
-                <div class="col-9 text-center">제목</div>
+                <div class="col-8 text-center">제목</div>
                 <div class="col-2 text-center">날짜</div>
+                <div class="col-1 text-center">작성자</div>
             </div>
             <hr class="border border-success">
             <!-- 부트스트랩 success 색상으로 할지, css로 색상 먹일지 고민중 -->
             <th:block th:each="board : ${ boardList }">
                 <div class="d-flex flex-wrap justify-content-around row-cols-auto"
                     th:onclick="|location.href='/board/detail?no=${board.no}'|">
-                    <div class="col-1 text-center">${ no }</div>
-                    <div class="col-9 text-center">${ 제목 }</div>
-                    <div class="col-2 text-center">${ 날짜 }</div>
+                    <div class="col-1 text-center" th:text="${ board.no }">${ no }</div>
+                    <div class="col-8 text-center" th:text="${ board.title }">${ 제목 }</div>
+                    <div class="col-2 text-center" th:text="${ board.date }">${ 날짜 }</div>
+                    <div class="col-1 text-center" th:text="${ board.writer.nickname }">${ 작성자 }</div>
                 </div>
                 <hr>
             </th:block><!-- each문, 10개씩 보이게 설정 -->
@@ -68,7 +72,7 @@
                 <!-- 맨 끝으로 이동 -->
                 <button th:onclick="'location.href=\'/board/list?page=' + @{${paging.maxPage}} + '\''">>></button>
             </th:block><br><br>
-            <button onclick="location.href='adminHelp003.html'" class="btn btn-success" id="insertbtn">글쓰기</button>
+            <button onclick="location.href='../admin/adminHelp003.html'" class="btn btn-success" id="insertbtn">글쓰기</button>
         </div>
 
         <div id="html">
