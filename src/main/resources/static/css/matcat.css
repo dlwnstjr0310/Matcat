@@ -5,7 +5,13 @@
     font-family: 'Noto Sans KR', sans-serif;
     margin: 0;
 }
-
+/* 탑버튼*/
+#toTop {
+  position: fixed;  
+  bottom: 100px;
+  display: none;
+  z-index: 9999;
+}
 
 
 /* MATCAT 기본 배경 색*/
@@ -193,6 +199,7 @@ footer p {
     font-size: 0.6rem;
     margin-top: 5px;
     padding: 5px 12px;
+    
 }
 
 #ctg:hover {
@@ -311,23 +318,24 @@ footer p {
 /* --------------------------------------상세 페이지 ---------------------------------------*/
 
 /* 상세페이지 하얀색 배경*/
-#whiteback {
+#whiteback_head {
     background-color: white;
     margin: auto;
-    width:70%;
+    width:60%;
     padding: 3% 3%;
     display: flex;
     justify-content: space-between;
+    
 }
-
+/* 상단왼쪽 사진과 원재료 설명 */
 #topleft {
     max-width: 50%;
     display: flex;
+    padding-right: 2%;
     flex-direction: column;
     justify-content: center;
     
 }
-
 #sangim {
     padding: 4% 4%;
     margin-top: 4%;
@@ -338,124 +346,160 @@ footer p {
     
 }
 
-
+/* 상단오른쪽 메뉴이름과 가격 구매옵션 등등..*/
 #topright {
-    max-width: 60%;
-
+    max-width: 50%;
+    padding-left: 2%;   
     
 } 
-
+/* 백종원식 부대찌개 큰글자*/
 #menuname {
     display: flex;
     justify-content: center;
-    font-size: 3rem;
-    border: 1px solid#2B7C1E;
-    padding: 4%;
+    font-size: 40px;
+    padding: 35px 50px 35px 50px;
+    border-top: 2px solid #2B7C1E;
+    border-bottom: 2px solid #2B7C1E;
+}
+/* 백종원식 부대찌개 작은글자*/
+#menusmallname {
+    padding-top: 10px;
+    font-size: 20px;
+    display: flex;
 }
 
-=======
-/* ------------------ 고객센터 부분 - 규진 -------------------- */
 
-html {
-    background-color: #FBF9F1;
+#statusprice {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    margin-top: -30px;
 }
-#html{
-    background-color: #FBF9F1;
-    width: 100%;
-    height: 50px;
-}
-
-#help01{
-    background-color: white;
-    margin-top: 20%;
-    margin-bottom: 70%;
-    margin-right: 30%;
-    margin-left: 30%;
-    width: 50%;
-    height: 50%;
-}
-#help01table{
-    width: 100%;
-    text-align: center;
-    border-radius: 20;
+#menuprice {
+    font-size: 25px;
 }
 
-#helphead{
-    background-color: darkgreen;
-    width: 101%;
-    height: 80px;
+
+#buy {
+    display: flex;
+    float: left;
+    margin-top: 42%;
+    font-size: 20px;
 }
-.containerkj{
-    width: 100%;
+#buymenu {
+    padding-top: 60%;
 }
-
-#allthing{
-
-    height: 500px;
-}
-/* 나중에 margin값 말고 center로 보내는 법 알아내야함; */
-#searchBox{
-
-    margin-left: 5%;
-}
-#arrow{
-
-    margin-left: 0%;
-}
-/* ------------------------------------------------- */
-
-#userhelp1{
-    margin-right: 1%;
-}
-
-#button1{
-    margin-left: 0%;
-}
-
-#updatebtn{
-    margin-left: 85%;
-}
-
-#deletebtn{
-    margin-left: 1%;
-}
-
-#insertbtn{
-    margin-left: 85%;
-}
-
-#removeReplbtn{
-    margin-top: 1%;
-    margin-left: 93%;
-}
-
-#registReply{
-
-    background-color: rgba(72, 162, 77, 0.495);
-
+#buymenubtn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    border-radius: 5px;
     color: white;
-
+    background-color:#2B7C1E;
+    border: #2B7C1E;
+    font-size: 1rem;
+    box-shadow: 3px 3px rgb(148, 148, 148);
+    padding: 5px 200px;
 }
 
-#HelpNav{
-
-    width: 200px;
-
-    height: 50px;
-
-    margin-top: 1%;
+#buymenubtn:hover {
+    background-color: #5aa94e;
 }
 
-#helpDesk{
+#buymenubtn:active {
+    color: black;
+    background-color: rgb(202, 202, 202);
+}
+
+#menuinformation {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    background-color:#ffffff;
+    border: 1px solid#000000;
+    font-size: 30px;
+    box-shadow: 3px 3px rgb(148, 148, 148);
+    padding: 25px 200px;
+}
+#menuinformation:hover {
+    background-color: #cdcdcd;
+}
+
+/* 검색페이지 바디 부분 시작*/
+
+
+.outer {
+    background-color: white;
+    margin: auto;
+    width:60%;
+    padding: 3% 3%;
+}
+
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #B9B9B9;
+            color: #000000;
+            border-radius: 5px;
+            padding: 10px;
+            
+        }
+
+        p.contents {
+            width: 90%;
+            height: 90%;
+            margin: auto;
+            display: none;
+        }
+
+/* 바디 끝 리뷰작성공간 */
+#bodyend {
+    width: 85%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border: 2px solid #2B7C1E;
+}
+
+#review_ground {
+    background-color: white;
+    margin: auto;
+    width:80%;
+    padding: 1% 0 4% 3%;
+    display: flex;
     
-    background-color: #2B7C1E;
-
-    width: 200px;
-
-    height: 70px;
-
-    text-align: center;
-
-    margin-left: 43%;
+    
 }
+#review_head a{
+    
+   display: flex;
+   
+   
+}
+
+
+#menu_review {
+    font-size: 2rem;
+    margin-bottom: 4%;
+}
+
+#picture_review {
+    margin-top: 10%;
+   opacity: 40%;
+}
+
+#review_picture {
+    width: 14%;
+
+    float: left;
+}
+
+
+
+
+
+
 
