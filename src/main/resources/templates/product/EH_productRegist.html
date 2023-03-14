@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품등록페이지</title>
+</head>
+<body>
+    <div>
+        <form>
+            <div id="no1">
+                <h5>상품</h5>
+                <fieldset>
+                    <label>상품명</label><br>
+                    <input type="text" placeholder="상품명 입력(예:[브랜드명]제품명)"><br><br>
+                    <label>카테고리</label><br>
+                    <input type="radio" name="category" id="korean" value="KR">
+                    <label for="korean">한식</label>
+                    <input type="radio" name="category" id="western" value="WS">
+                    <label for="western">양식</label>
+                    <input type="radio" name="category" id="chinese" value="CH">
+                    <label for="chinese">중식</label>
+                    <input type="radio" name="category" id="japanese" value="JP">
+                    <label for="japanese">일식</label>
+                    <input type="radio" name="category" id="ctgretc" value="ETC">
+                    <label for="ctgretc">기타</label>
+                </fieldset>
+            </div>
+
+            <div id="no2">
+                <h5>대표 이미지</h5>
+                <fieldset>
+                    <div class="mainimg-area">
+                        <img style="width: 120px; height: 100px;">
+                    </div>
+                    <div style="display: none;">
+                        <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
+                    </div>                    
+                </fieldset>
+            </div>
+
+            <div id="no3">
+                <h5>상세정보</h5>
+                <fieldset>
+                    <label for="">상세 정보 이미지</label>
+                    <div>
+                        <table class="prdt-detail">
+                            <tr>
+                                <td>
+                                    <div class="infoimg-area">
+                                        <img style="width: 120px; height: 100px;">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="infoimg-area">
+                                        <img style="width: 120px; height: 100px;">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="infoimg-area">
+                                        <img style="width: 120px; height: 100px;">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="infoimg-area">
+                                        <img style="width: 120px; height: 100px;">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="infoimg-area">
+                                        <img style="width: 120px; height: 100px;">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="display: none;">
+                            <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
+                            <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
+                            <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
+                            <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
+                            <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            
+            <div id="no4">
+                <h5>가격</h5>
+                <fieldset>
+                    <label for="">판매가격</label><br>
+                    <input type="number" name="price" min="0" max="1000000" step="1000" value="0">
+                </fieldset>
+            </div>
+            
+            <div id="no5">
+                <h5>재고 및 상품 상태</h5>
+                <fieldset>
+                    <label for="">재고수량</label><br>
+                    <input type="number" name="price" min="0" max="10000" step="10" value="100"><br><br>
+                    <label for="">상품 상태</label><br>
+                    <input type="radio" name="prdt-status" id="onsale" value="ON">
+                    <label for="onsale">판매중</label>
+                    <input type="radio" name="prdt-status" id="soldout" value="OFF">
+                    <label for="soldout">일시품절</label>
+                    <input type="radio" name="prdt-status" id="notsale" value="END">
+                    <label for="notsale">판매중단</label>
+
+                </fieldset>
+            </div>
+
+            <br>
+            <div class="regist-btn">
+                <button type="submit">등록</button>
+                <button type="button" onclick="location.href=''">돌아가기</button>
+                <button type="reset">취소</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <script>
+		(function(){
+			/* div image-area 요소 */
+			const imageArea = document.querySelectorAll(".mainimg-area");
+			/* input type=file 요소 */
+			const fileElements = document.querySelectorAll("[type=file]");
+			/* div 클릭 시 open 함수 동작 */
+			imageArea.forEach(item => item.addEventListener('click', open));
+			/* 파일 첨부가 발생하는 상황에 preview 함수 동작 */
+			fileElements.forEach(item => item.addEventListener('change', preview));
+			
+			function open() {
+				const index = Array.from(imageArea).indexOf(this);
+				fileElements[index].click();
+			}
+			
+			function preview() {
+				const index = Array.from(fileElements).indexOf(this);
+				console.log(this);
+				console.log(this.files, this.files[0]);
+				/* 첨부 된 파일이 존재한다면 */
+				if(this.files && this.files[0]) {
+					const reader = new FileReader();
+					reader.readAsDataURL(this.files[0]);
+					/* 파일 로드 후 동작하는 이벤트 설정 */
+					reader.onload = function() {
+						console.log(reader.result);
+						if(index === 0)
+							imageArea[index].innerHTML = `<img src='${reader.result}' style='width: 350px; height: 200px'>`;
+						else
+							imageArea[index].innerHTML = `<img src='${reader.result}' style='width: 120px; height: 100px'>`;
+					}
+				}
+			}
+			
+		})();
+	</script>
+
+
+
+
+
+</body>
+</html>
