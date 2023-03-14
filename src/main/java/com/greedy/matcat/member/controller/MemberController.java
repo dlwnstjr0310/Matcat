@@ -12,9 +12,12 @@ public class MemberController {
     public void login() {
     }
 
-    @GetMapping("/regist")
-    public void regist() {
+    @GetMapping("/regist1")
+    public void regist1() {
     }
+
+    @GetMapping("/regist2")
+    public void regist2(){}
 
     @GetMapping("/findId")
     public void findId() {
