@@ -71,10 +71,6 @@ tr td {
     justify-content: center;
 }
 
-.nameInsert {
-    width: 400px;
-    height: 35px;
-}
 
 .Phone {
     width: 400px;
@@ -102,4 +98,6 @@ tr td {
 
 input {
     font-size: 20px;
+    width: 400px;
+    height: 35px;
 }

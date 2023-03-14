@@ -10,14 +10,14 @@
 <body class="container">
 	<div th:replace="/member/header.html"></div>
 	<div class="login-container">
-		<form id="findPWD" action="/member/findPWD" method="post">
+		<form id="findPWD" action="/member/hello" method="post">
 			<table id="text-box">
 				<tr class="id">
 					<th>
-						<label class="text" name="memberId" class="memberId">아이디</label>
+						<label class="text" name="memberId">아이디</label>
 					</th>
 					<td>
-						<input type="text" name="Email" class="Email">
+						<input type="text" name="memberId" class="idInsert" id="memberId">
 					</td>
 				</tr>
 				<tr class="name">
@@ -25,7 +25,7 @@
 						<label class="text">이름</label>
 					</th>
 					<td>
-						<input type="text" name="memberName" class="nameInsert">
+						<input type="text" name="memberName" class="nameInsert" id="memberName">
 					</td>
 				</tr>
 				<tr class="phone">
@@ -33,7 +33,7 @@
 						<label class="text">전화번호</label>
 					</th>
 					<td>
-						<input type="text" name="Phone" class="Phone">
+						<input type="text" name="Phone" class="phoneInsert" id="Phone">
 					</td>
 				</tr>
 				<tr class="email">
@@ -41,8 +41,8 @@
 						<label class="text">이메일</label>
 					</th>
 					<td>
-						<input type="text" name="Email" class="Email">
-					</td>
+						<input type="email" name="Email" class="emailInsert" id="Email">
+					<td style="padding-left:10px"><input type="button" value="이메일 주소 확인" id="doubleCheck"></td>
 				</tr>
 				<div id="centerplz">
 					<input type="submit" value="비밀번호 찾기" id="findMyPWD">
