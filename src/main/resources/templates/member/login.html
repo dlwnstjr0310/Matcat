@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>login</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script type="text/javascript" src="/js/login.js"></script>
+
+    <!-- <script>
+	    const message = '[[${message}]]';
+		message && alert(message);
+	</script> -->
+
+</head>
+<body class="container">
+    <div th:replace="/member/header.html"></div>
+    <div class="login-container">
+            <form id="loginForm" action="/member/login" method="post">
+                <table id="text-box">
+                    <tr>
+                        <th class="insertid">
+                            <label class="text">ID</label>
+                        </th>
+                        <td>
+                            <input type="text" name="memberId" class="IDinsert">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label class="text">비밀번호</label>
+                        </th>
+                        <td>
+                            <input type="password" name="memberPwd" class="PWDinsert">
+                        </td>
+                    </tr>
+                    <div id="centerplz">
+                        <input type="submit" value="로그인" id="loginSubmit">
+                    </div>
+                    <div class="btns" align="center">
+                        <button id="regist" onclick="location.href='/member/regist1'" type="button">회원가입</button>
+                        <button onclick="location.href='/member/findId'" type="button">아이디 찾기</button>
+                        <button onclick="location.href='/member/findPWD'" type="button">비밀번호 찾기</button>
+                    </div>
+                </table>
+            </form>
+        </div>
+</body>
+</html>

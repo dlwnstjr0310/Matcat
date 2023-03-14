@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI_SANG_001</title>
+    
+    <link rel="stylesheet" href="../../../static/css/matcat.css">
+    <!--  구글 웹 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+
+<!-- 검색 돋보기 아이콘 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="matcat-header">
+        <h1><a id="matcat-logoname" href="UI_MAIN_001.html"><img src="../../../static/image/matcatlogo.png"></a></h1>
+        <nav>
+            <ul id="header-nav">
+                <li><a href="UI_MAIN_001.html">홈</a></li>
+                <li><a href="UI_MAIN_003.html">상품목록</a></li>
+                <li><a href="UI_HELP_001.html">고객센터</a></li>
+                <li><a href="UI_MPG_001.html">마이페이지</a></li>
+                <li id="search-box">
+                    <form action="." method="post">
+                      <input id="search-txt" type="text" placeholder="검색...">
+                      <button class="search-btn" type="submit">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </form>
+                  </li>
+                <li><a href="UI_JOIN_002.html">로그인</a></li>
+                <a id="jangi" href="UI_MAIN_004.html"><img src="../../../static/image/장바구니아이콘.png" value="1"></a>
+            </ul>
+        </nav>
+        </header>
+
+<a id="toTop" href="#"><img src="../../../static/image/화살표 좌.png"></a>
+
+        <div id="whiteback_head">
+            
+            <div id="topleft">
+                <img src="../../../static/image/부대찌개사진.png">
+                <p id="sangim">
+                    <a>원재료명 및 함량</a>
+                    <a>소스[마늘(중국산), 고춧가루(중국산75.27%/국산24.73%), 쇠고기맛본다
+                    시, 복합조미식품, 자연치즈], 유탕면[소맥분(밀:미국산,호주산), 변성전분, 
+                    팜유(말레이시아산), 글루텐, 정제소금], 프레스햄1[돼지고기(국산), 양파(국
+                    산), 빵가루, 정제소금, 설탕], 소시지[돼지고기(지방일부사용), 닭고기(기계
+                    발골육), 옥수수전분, 정제소금, 설탕], 프레스햄2[돼지고기(지방일부사용), 
+                    옥수수전분, 함수결정포도당, 양파, 정제소금], 햄[돼지고기, 옥수수전분, 정
+                    제소금, 설탕, 함수결정포도당], 양배추, 양파, 가공치즈, 대파</a>
+                </p>
+            </div>
+
+            <div id="topright">
+                <a id="menuname">백종원식 부대찌개</a>
+                <a id="menusmallname">백종원식 부대찌개</a>
+                <div id="statusprice">    
+                    <a id="menustatus">[재고상태]</a>
+                    <a id="menuprice">9,000원</a>
+                </div>
+
+                <div id="buy">
+                    <form>
+                            <label for="sell_price">수량</label>
+                            <input type="hidden" name="sell_price" value="5500">
+                            <input type="text" name="amount" value="1" size="3" max="">
+                            <input type="button" value=" + " name ="add">
+                            <input type="button" value=" - " name ="minus">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label for="sum">총 금액</label> 
+                            <input type="text" name="sum" size="11" readonly>원
+                    </form>
+                </div>
+
+                <div id="buymenu">
+                    <button id="buymenubtn">장바구니</button>
+                    <button id="buymenubtn">바로구매</button>
+                    <button id="menuinformation">구매정보</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+        <div class="outer">
+            <div class="menu">상품 정보 더 보기</div>
+            <p class="contents"><img src="../../../static/image/제품 상세 프레임.png" width="90%"></p>
+        </div>
+
+        <script>
+            $(function(){
+                $(".menu").click(function(){
+                if($(this).next("p").css("display") === 'none') {
+                    $("p.contents").slideUp();          // 하나를 열고 다른걸 열면 자동으로 닫히면서 하나만 열리게 함
+                        $(this).next("p").slideDown();
+                } else {
+                        $(this).next("p").slideUp();  
+                }
+                });
+            });
+        </script>
+
+            <!-- 바디 끝 / 리뷰 작성공간을 알리는 선 -->
+        <hr id="bodyend">
+        
+        <div id="review_ground">
+            
+            <div id="review_head">
+                <a id="menu_review"><b>상품 후기</b></a>
+                <a id="picture_review"><b>사진 후기</b></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                
+            </div>
+            
+
+
+
+
+
+        </div>
+
+
+        <!-- 탑버튼 자바스크립트 -->
+        <script>
+            $(function() {
+                 $(window).scroll(function() {
+                   if ($(this).scrollTop() > 200) {
+                        $('#toTop').fadeIn();            
+                        $('#toTop').css('left', $('#sidebar').offset().left);
+                    } else {
+                          $('#toTop').fadeOut();
+                    }
+                });
+                    $("#toTop").click(function() {
+                    $('html, body').animate({
+                        scrollTop : 0
+                        }, 400);
+                    return false;
+                });
+            });
+        </script>
+
+        <footer>
+            <div id="wrapper">
+                <p><small>&copy; 2023 by Mat Cat Powered by MATCAT Team</small></p>
+            </div>
+        </footer>
+</body>
+</html>

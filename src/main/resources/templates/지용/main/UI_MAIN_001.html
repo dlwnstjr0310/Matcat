@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI_MAIN_001</title>
-    <link rel="stylesheet" href="../../../static/matcat.css">
+    <link rel="stylesheet" href="../../../static/css/matcat.css">
 <!--  구글 웹 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,17 +16,21 @@
 integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
 crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" 
+    crossorigin="anonymous"></script>
+
 </head>
 <body>
 
-
+   
     <div id="matcat">
         <header id="matcat-header">
         <h1><a id="matcat-logoname" href="UI_MAIN_001.html"><img src="../../../static/image/matcatlogo.png"></a></h1>
         <nav>
             <ul id="header-nav">
                 <li><a href="UI_MAIN_001.html">홈</a></li>
-                <li><a href="UI_MAIN_002.html">상품목록</a></li>
+                <li><a href="UI_MAIN_003.html">상품목록</a></li>
                 <li><a href="UI_HELP_001.html">고객센터</a></li>
                 <li><a href="UI_MPG_001.html">마이페이지</a></li>
                 <li id="search-box">
@@ -41,7 +45,14 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <a id="jangi" href="UI_MAIN_004.html"><img src="../../../static/image/장바구니아이콘.png" value="1"></a>
             </ul>
         </nav>
-        </header> 
+        </header>
+
+        <!-- 탑버튼 -->
+        <a id="toTop" href="#"><img src="../../../static/image/화살표 좌.png"></a>
+       
+
+
+
 
         
         <div id="body-mainpicture">
@@ -67,33 +78,33 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <div id="picture"><img src="../../../static/image/메인페이지사진.jpg" width="80%">
                     <div>밀키트</div>
                     <div>8,900₩</div>
-                    <div id="btn">
-                        <a>카트에 추가하기</a>
-                        <a>바로 구매</a>
+                    <div id="optiontool">
+                        <button id="btn">카트에 추가하기</button>
+                        <button id="btn">바로구매</button>
                     </div>
                 </div>
                 <div id="picture"><img src="../../../static/image/메인페이지사진.jpg" width="80%">
                     <div>밀키트</div>
-                    <div>8,900원</div>
-                    <div id="btn">
-                        <a>카트에 추가하기</a>
-                        <a>바로 구매</a>
+                    <div>8,900₩</div>
+                    <div id="optiontool">
+                        <button id="btn">카트에 추가하기</button>
+                        <button id="btn">바로구매</button>
                     </div>
                 </div>
                 <div id="picture"><img src="../../../static/image/메인페이지사진.jpg" width="80%">
                     <div>밀키트</div>
-                    <div>8,900원</div>
-                    <div id="btn">
-                        <a>카트에 추가하기</a>
-                        <a>바로 구매</a>
+                    <div>8,900₩</div>
+                    <div id="optiontool">
+                        <button id="btn">카트에 추가하기</button>
+                        <button id="btn">바로구매</button>
                     </div> 
                 </div>
                 <div id="picture"><img src="../../../static/image/메인페이지사진.jpg" width="80%">
                     <div>밀키트</div>
-                    <div>8,900원</div>
-                    <div id="btn">
-                        <a>카트에 추가하기</a>
-                        <a>바로 구매</a>
+                    <div>8,900₩</div>
+                    <div id="optiontool">
+                        <button id="btn">카트에 추가하기</button>
+                        <button id="btn">바로구매</button>
                     </div>
                 </div>
             </div>
@@ -106,46 +117,63 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <div id="picture"><img src="../../../static/image/메인페이지사진.jpg" width="80%">
                     <div>밀키트</div>
                     <div>8,900₩</div>
-                    <div id="btn">
-                        <a>카트에 추가하기</a>
-                        <a>바로 구매</a>
+                    <div id="optiontool">
+                        <button id="btn">카트에 추가하기</button>
+                        <button id="btn">바로구매</button>
                     </div>
                 </div>
                 <div id="picture"><img src="../../../static/image/메인페이지사진.jpg" width="80%">
                     <div>밀키트</div>
-                    <div>8,900원</div>
-                    <div id="btn">
-                        <a>카트에 추가하기</a>
-                        <a>바로 구매</a>
+                    <div>8,900₩</div>
+                    <div id="optiontool">
+                        <button id="btn">카트에 추가하기</button>
+                        <button id="btn">바로구매</button>
                     </div>
                 </div>
                 <div id="picture"><img src="../../../static/image/메인페이지사진.jpg" width="80%">
                     <div>밀키트</div>
-                    <div>8,900원</div>
-                    <div id="btn">
-                        <a>카트에 추가하기</a>
-                        <a>바로 구매</a>
-                    </div> 
+                    <div>8,900₩</div>
+                    <div id="optiontool">
+                        <button id="btn">카트에 추가하기</button>
+                        <button id="btn">바로구매</button>
+                    </div>
                 </div>
                 <div id="picture"><img src="../../../static/image/메인페이지사진.jpg" width="80%">
                     <div>밀키트</div>
-                    <div>8,900원</div>
-                    <div id="btn">
-                        <a>카트에 추가하기</a>
-                        <a>바로 구매</a>
+                    <div>8,900₩</div>
+                    <div id="optiontool">
+                        <button id="btn">카트에 추가하기</button>
+                        <button id="btn">바로구매</button>
                     </div>
                 </div>
             </div>
         </div>
 
 
-
-
-
-
     </div>
     
     <br><br><br><br><br><br><br><br><br><br><br>
+
+            <!-- 탑버튼 자바스크립트 -->
+        <script>
+            $(function() {
+                 $(window).scroll(function() {
+                   if ($(this).scrollTop() > 200) {
+                        $('#toTop').fadeIn();            
+                        $('#toTop').css('left', $('#sidebar').offset().left);
+                    } else {
+                          $('#toTop').fadeOut();
+                    }
+                });
+                    $("#toTop").click(function() {
+                    $('html, body').animate({
+                        scrollTop : 0
+                        }, 400);
+                    return false;
+                });
+            });
+        </script>
+
 
 <footer>
     <div id="wrapper">

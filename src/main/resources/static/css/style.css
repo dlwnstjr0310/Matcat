@@ -1,0 +1,185 @@
+@charset "UTF-8";
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* MATCAT 기본 배경 색*/
+html {
+    background-color: #FBF9F1;
+}
+/* MATCAT로고 색상*/
+.matcat-logoname {
+    color: #2A6938;  
+}
+#home {  
+}
+/* 맨위에 헤더  */
+.matcat-header {
+    width: 90%;
+    margin-left: 90px;
+    margin-top : 10px;
+    display: flex;
+    justify-content: space-between;
+}
+/* 헤더 flex와 정렬 및 등등*/
+.header-nav {
+    display: flex;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-top : 50px;
+}
+/* 헤더 안에 li설정 ex.홈 상품목록 마이페이지 등등*/
+.header-nav li {
+    margin-right: 110px;
+    margin-top: 10px;
+}
+/* 마우스오버시 색상 변경*/
+.header-nav a:hover {
+    color: darkgrey;
+}
+/* <a> 밑에 있는 링크 밑줄 제거 */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*--------- 주문서 ---------*/
+.tableheader{
+    text-align: center;
+    margin-top: 5em;
+    font-weight: 900;
+    font-size: large;
+}
+
+#order-list td{
+    padding: 1em 4em;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 0.7em;
+  }
+  
+table td {
+    padding: 10px;
+    padding-right: 3em;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+  }
+
+table td:last-child{
+    padding-right: 0px;
+}
+
+table img{
+    width: 50%;
+    padding: 0%;
+}
+
+
+/*--------- 상품총금액 ---------*/
+#total{
+    float: right;
+    font-size: 1em;
+    margin: 10px;
+    margin-right: 15%;
+}
+
+
+/*--------- 주문자 정보 ---------*/
+#infomation-form{
+    flex: left;
+    margin-left: 15%;
+}
+
+#delivery-form{
+    flex: left;
+    margin-left: 15%;
+}
+
+#delivery-form td{
+    border-bottom: none;
+}
+
+/* 주소입력란 배경 삭제 */
+input[name="address1"]{
+    border: none;
+    background-color: #FBF9F1;
+}
+
+/*--------- 결제 정보 ---------*/
+.payinfo{
+    font-size: medium;
+    margin: 3%;
+    margin-right: 15%;
+    float: right;
+}
+
+.payinfo td{
+    margin: 3%; 
+    text-align: right;
+}
+
+.payhead {
+    margin: 3%; 
+    text-align: left !important; 
+}
+
+#total-pay td{
+    color: red;
+    font-weight: 900;
+}   
+
+.liblank{
+    list-style: none;
+}
+
+.paymethod{
+
+    display: flex;
+    align-items: center;
+}
+
+.paymethod > *{
+    padding: 5%;
+    border: none;
+    background-color: #FBF9F1;
+}
+
+.paymethod p{
+    font-size: small;
+}
+
+.p-font-small{
+    font-size: small;
+}
+
+.agree{
+    flex: left;
+    margin-left: 10%;
+}
+
+.agree span{
+    text-decoration: underline;
+}
+
+.btn-pay{
+    font-size: large;
+    margin: 3%;
+    margin-right: 15%;
+    float: right;
+    width: 427px;
+    height: 64px;
+    background-color: #2A6938;
+    color: white;
+    font-weight: 900;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.568);}

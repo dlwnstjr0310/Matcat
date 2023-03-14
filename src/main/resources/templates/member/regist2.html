@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview</title>
+	<link rel="stylesheet" href="/css/regist2.css">
+	<script type="text/javascript" src="/js/regist.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+  </head>
+  <body class="container">
+	<div th:replace="/member/header.html"></div>
+
+	<div class="login-container">
+		<h4 class="main-text">회원가입</h4>
+		<div class="sub-text">
+			<h4 style="opacity: 0.3;">1. 약관동의</h4>
+			<h4>2. 회원가입</h4>
+			<h4 style="opacity: 0.3">3. 가입완료</h4>
+		</div>
+
+        <form action="/member/regist" method="post">
+            <table class="table">
+                <tr class="name">
+                    <th>이름</th>
+                    <td><input type="text" maxlength="10" name="memberName" id="memberName" required></td>
+                </tr>
+                <tr>
+                    <th>아이디 </th>
+                    <td><input type="text" maxlength="13" name="memberId" id="memberId" required></td>
+                    <td style="padding-left:10px"><input type="button" value="중복확인" id="duplicationCheck"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input type="password" maxlength="13" name="memberPwd" id="memberPwd" required></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>비밀번호확인</th>
+                    <td><input type="password" maxlength="13" name="memberPwd2" id="memberPwd2" required></td>
+                    <td style="padding-left:10px"><input type="button" value="확인" id="DoubleCheck" ></td>
+                </tr>
+                <tr>
+                    <th>성별</th>
+                    <td class="nono"><input type="radio" name="gender" class="gender" required>남</td>
+                    <td class="nono"><input type="radio" name="gender" class="gender" required>여</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>연락처 </th>
+                    <td><input type="tel" name="phone" id="Phone"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>이메일 </th>
+                    <td><input type="email" name="email" id="Email"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>우편번호</th>
+                    <td><input type="text" name="zipCode" id="zipCode" readonly></td>
+                    <td style="padding-left:10px"><input type="button" value="검색" id="searchZipCode"></td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td><input type="text" name="address1" id="address1" readonly></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>상세주소</th>
+                    <td><input type="text" name="address2" id="address2"></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div align="center">
+                <input type="submit" value="가입하기">
+            </div>
+        </form>
+    
+	</div>
+
+
+  </body>
+</html>

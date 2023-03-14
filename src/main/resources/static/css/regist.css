@@ -1,0 +1,119 @@
+html {
+    background-color: #FBF9F1;
+}
+
+body {
+    width: 1440px;
+    height: 1024px;
+    background: #FBF9F1;
+}
+
+#matcat {
+    margin-left: 30%;
+    width: 150px;
+    height: 150px;
+}
+
+.regist_header {
+    display: flex;
+    margin-top: 80px;
+}
+
+.header_name {
+    /*ㅎ ㅎㅎ*/
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    margin-left: 658px;
+    margin-top: 60px;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.login-container {
+    width: 875px;
+    height: 659px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: #f3f0f0;
+    box-shadow: 6px 10px 4px 0 rgba(0,0,0,0.25);
+}
+
+h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.main-text {
+    font-weight: 700;
+    line-height: 24px;
+    font-style:normal;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+.sub-text {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 0px;
+}
+
+.kingCheck {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.check {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.line {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.first {
+    border: solid black 1px;
+    overflow: scroll;
+    display: flex;
+    width: 800px;
+    height: 85px;
+    margin: 10px 0px 20px 50px;
+}
+
+.two-button {
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.button1{
+    background-color: #FFFDFD;
+    width: 299px;
+    height: 37px;
+    border: 0px;
+    border-radius: 5%;
+    font-size: 20px;
+}
+
+.button2{
+    background-color: #2B7C1E;
+    width: 299px;
+    height: 37px;
+    border: 0px;
+    border-radius: 5%;
+    font-size: 20px;
+}
