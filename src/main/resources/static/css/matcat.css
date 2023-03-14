@@ -24,7 +24,7 @@ html {
 /* 맨위에 헤더  */
 #matcat-header {
     width:90%;
-    margin-left: 5%;
+    margin-left: 9%;
     margin-top : 1%;
     display: flex;
     justify-content: space-between;
@@ -53,10 +53,6 @@ a {
     color: black;
 }
 
-/* 상품목록 */
-
-
-
 /* 검색창 길이 */
 #search-txt {
     width: 150px;
@@ -64,7 +60,7 @@ a {
 
 /* 장바구니 로그인옆에 붙임*/
 #jangi {
-    margin-left: -100px;
+    margin-left: -80px;
 }
 
 /*-------------------------------body-------------------------------*/
@@ -89,7 +85,7 @@ a {
     align-items: center;
     text-align: center;
     left: 83%;
-    top: 200px;
+    top: 28%;
 }
 
 /* 추천메뉴 전체 틀 */
@@ -117,17 +113,24 @@ a {
     font-size: 20px;
 }
 /* 바로구매 / 카트에 추가하기 버튼 */
-#btn a{
-    font-size: 10px;
+#btn{
+    border-radius: 10px;
     color: white;
-    background-color: #2B7C1E;
-    padding: 7px 15px;
-    border-radius: 15px;
-   
-  }
+    background-color:#2B7C1E;
+    border: #2B7C1E;
+    font-size: 0.6rem;
+    padding: 5px 12px;
+}
+#btn:hover {
+    background-color: #5aa94e;
+}
+
+#btn:active {
+    color: black;
+    background-color: rgb(202, 202, 202);
+}
 
 
-  
 /* 가장많이팔리제품 전체 툴 */
 #body-manysellmenu {
     text-align: center;
@@ -167,10 +170,41 @@ footer p {
     color : white;
 }
 
+/*  --------------------------------------- 메인페이지 끝 ------------------------------------*/
 
 
-/* 검색 페이지 */
+/* -------------------------------------- 검색 페이지 ---------------------------------------*/
 
+
+/* 왼쪽 카테고리 창*/
+#categorymenu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    right: 90%;
+}
+
+#ctg {
+    border-radius: 10px;
+    color: white;
+    background-color:#2B7C1E;
+    border: #2B7C1E;
+    font-size: 0.6rem;
+    margin-top: 5px;
+    padding: 5px 12px;
+}
+
+#ctg:hover {
+    background-color: #5aa94e;
+}
+
+#ctg:active {
+    color: black;
+    background-color: rgb(202, 202, 202);
+}
+
+/* 검색결과*/
 #searchfont {
     margin: auto;
     width: 60%;
@@ -188,15 +222,14 @@ footer p {
     font-size: 2rem;
     
 }
-
+/* 검색결과 아래 검색창 길이 높이 */
 #search-txt2 {
-    
     margin-top: 20px;
     width: 60%;
     height: 35px;
 }
 
-
+/* 전체/출력 창 및 정렬순 바 */
 #countmenu {
     width:72%;
     margin-left: 17%;
@@ -204,21 +237,118 @@ footer p {
     justify-content: space-between;
 }
 
+/* 전체/출력  신상품 / 베스트상품 / 높은 가격순 / 낮은 가격순 */
 #menuoption {
     display: flex;
     list-style-type: none;
-    font-size: 18px;
-    margin-top : 2%;
+    font-size: 13px;
+    margin-top : 3%;
     margin-right: 130px;
 }
+
+/* 글자두께 설정*/
+#all {font-weight: bold;}
+#semiall {font-weight: bold;}
+
+/* 단어 사이사이 공간*/
 #menuoption li {
-    margin-right: 20px;
+    margin-right: 10px;
     
 }
 
+/* 신상품 / 베스트상품 / 높은 가격순 / 낮은 가격순 상세 설정*/
+#menuoptiontoll {
+    font-size: 1rem;
+    margin-right: 20px;
+    background-color: #FBF9F1;
+    border: #FBF9F1;
+}
+#menuoptiontoll:hover {
+    color: #b6b6b6;
+    border-radius: 10px;
+}
+
+
+/* 전체보기*/
+#allview {
+    border-radius: 10px;
+    color: white;
+    background-color:#6E9ADC;
+    border: #2B7C1E;
+    font-size: 1rem;
+    padding: 6px 30px;
+}
+#allview:hover {
+    background-color: #a1c6ff;
+    
+}
+#allview:active {
+    background-color: rgb(202, 202, 202);
+    color: black;
+}
+
+/* ------------------------------------------- 긴 선 ------------------------------------ */
 #hr {
     border-style:double;
-    margin-top: 20px;
+    margin-top: 7px;
     width: 62%;
     margin-left: 19%;
 }
+
+
+/* 검색해서 나온 메뉴들*/
+#searchmenu {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 2%;
+}
+
+/* ------------------------------------ 상품목록 / 검색페이지 끝 -----------------------------------*/
+
+/* --------------------------------------상세 페이지 ---------------------------------------*/
+
+/* 상세페이지 하얀색 배경*/
+#whiteback {
+    background-color: white;
+    margin: auto;
+    width:70%;
+    padding: 3% 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#topleft {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#sangim {
+    padding: 4% 4%;
+    margin-top: 4%;
+    background-color: #EFE9DF;
+    display: flex;
+    text-align:left;
+    flex-direction: column;
+    
+}
+
+
+#topright {
+    max-width: 60%;
+
+    
+} 
+
+#menuname {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    border: 1px solid#2B7C1E;
+    padding: 4%;
+}
+
