@@ -14,10 +14,7 @@
 
 </head>
 <body class="container">
-    <div class="regist_header">
-        <img src="/image/고양이.png" id="matcat">
-        <p class="header_name">MATCAT</p>
-    </div>
+    <div th:replace="/member/header.html"></div>
     <div class="login-container">
             <form id="loginForm" action="/member/login" method="post">
                 <table id="text-box">
