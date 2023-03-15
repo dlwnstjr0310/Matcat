@@ -94,14 +94,14 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         </div>
 
         
-        <div class="outer">
-            <div class="menu">상품 정보 더 보기</div>
+        <div id="outer">
+            <div id="menu">상품 정보 더 보기</div>
             <p class="contents"><img src="../../../static/image/제품 상세 프레임.png" width="90%"></p>
         </div>
 
         <script>
             $(function(){
-                $(".menu").click(function(){
+                $("#menu").click(function(){
                 if($(this).next("p").css("display") === 'none') {
                     $("p.contents").slideUp();          // 하나를 열고 다른걸 열면 자동으로 닫히면서 하나만 열리게 함
                         $(this).next("p").slideDown();
@@ -118,7 +118,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         <div id="review_ground">
             
             <div id="review_head">
-                <a id="menu_review"><b>상품 후기</b></a>
+                <a id="menu_review_head"><b>상품 후기</b></a>
                 <a id="picture_review"><b>사진 후기</b></a>
                 <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
                 <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
@@ -127,16 +127,94 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
                 <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
                 <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="reviewcount">총 32개</a><br>
+                <button id="newest">최신순 &nbsp;&nbsp;</button>
+                <button id="best_sequence">추천순</button>
+
+                <div id="member_review">
+                        <a id="member_grade">회원</a>
+                        <a id="member_name">김**</a>
+                        <a id="menu_name">백종원식 부대찌개</a><br>
+                        <a id="menu_review">맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~
+                            맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~
+                            맛있어요~~맛있어요~~맛있어요~~맛있어요~~</a> <!-- 이거 안붙이면 사잔이랑 글 위치가 안맞음 >>> --><br>
+                        <!-- 이미지 공간 -->
+                        <a id="img_ground"><img src="../../../static/image/부대찌개사진.png" width="10%"></a>
+                        <a id="upload_date">업로드 날짜(23.3.15)</a>
+                        <a id="review_endline"></a><br>
+                </div>
+
+                <div id="member_review">
+                    <a id="member_grade">회원</a>
+                    <a id="member_name">김**</a>
+                    <a id="menu_name">백종원식 부대찌개</a><br>
+                    <a id="menu_review">맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~
+                        맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~
+                        맛있어요~~맛있어요~~맛있어요~~</a>  <!-- 이거 안붙이면 사잔이랑 글 위치가 안맞음 >>> --><br>
+                    <!-- 이미지 공간 -->
+                    <a id="img_ground"><img src="" width="10%"></a>
+                    <a id="upload_date">업로드 날짜(23.3.15)</a>
+                    <a id="review_endline"></a><br>
+                </div>
                 
+
+                <div id="review_outer">
+                    <div id="review_addview">더 보기</div>
+                    <p class="contents">
+                        <!-- 리뷰 링크 연결? 하면 뜸-->
+                        <img src="../../../static/image/제품 상세 프레임.png" width="90%">
+                    
+                    </p>
+                </div>
             </div>
             
+            <script>
+                $(function(){
+                    $("#review_addview").click(function(){
+                    if($(this).next("p").css("display") === 'none') {
+                        $("p.contents").slideUp();          // 하나를 열고 다른걸 열면 자동으로 닫히면서 하나만 열리게 함
+                            $(this).next("p").slideDown();
+                    } else {
+                            $(this).next("p").slideUp();  
+                    }
+                    });
+                });
+            </script>
+
+        </div>
+
+        <div id="ect">
+
+            <div id="left_ect">
+                <a id="a1">고객행복센터</a>
+                <a id="a2">1644-1234&nbsp;&nbsp;&nbsp;&nbsp;<small>월~토요일 오전 7시-오후 6시</small></a>
+                <div id="etc_button">
+                    <button id="kakao">카카오톡 문의</button>
+                    <label>월~토요일 | 오전 7시 - 오후 6시  </label> <label> / 월~토요일 | 오전 7시 - 오후 6시</label>
+                </div>
+
+                <div id="etc_button">
+                    <button id="kakao">1대1 문의</button>
+                    <label>365일 고객센터 운영시간에 순차적으로 답변드리겠습니다</label>
+                </div>
+
+                <div id="etc_button">
+                    <button id="kakao">대량주문 문의</button>
+                    <label>월~토요일 | 오전 7시 - 오후 6시  </label> <label> / 월~토요일 | 오전 7시 - 오후 6시</label>
+                 </div>
 
 
+
+            </div>
+
+            <div id="right_ect">
+
+                
+            </div>
 
 
 
         </div>
-
 
         <!-- 탑버튼 자바스크립트 -->
         <script>
