@@ -42,8 +42,5 @@ build/
 /mvnw.cmd
 /bin/
 
-/README.md
 
-
-.metadata
-
+/.metadata/
