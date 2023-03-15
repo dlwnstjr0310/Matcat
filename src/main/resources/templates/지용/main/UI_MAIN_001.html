@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI_MAIN_001</title>
     <link rel="stylesheet" href="../../../static/css/matcat.css">
+    
 <!--  구글 웹 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,11 +42,20 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                       </button>
                     </form>
                   </li>
-                <li><a href="UI_JOIN_002.html">로그인</a></li>
+                <li><a href="javascript:popup('login.html', 'popup');">로그인</a></li>
+               
                 <a id="jangi" href="UI_MAIN_004.html"><img src="../../../static/image/장바구니아이콘.png" value="1"></a>
             </ul>
         </nav>
         </header>
+
+        <!-- <script>
+            function popup(url, name){
+                var options = 'top=50, left=50, width=500, height=600, status=yes, menubar=yes, toolbar=yes, resizable=yes';
+                window.open(url, name, options); 
+            }
+        
+        </script> -->
 
         <!-- 탑버튼 -->
         <a id="toTop" href="#"><img src="../../../static/image/화살표 좌.png"></a>
@@ -155,25 +165,25 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     <br><br><br><br><br><br><br><br><br><br><br>
 
             <!-- 탑버튼 자바스크립트 -->
-        <script>
-            $(function() {
-                 $(window).scroll(function() {
-                   if ($(this).scrollTop() > 200) {
-                        $('#toTop').fadeIn();            
-                        $('#toTop').css('left', $('#sidebar').offset().left);
-                    } else {
-                          $('#toTop').fadeOut();
-                    }
+       
+            <script>
+                $(function() {
+                     $(window).scroll(function() {
+                       if ($(this).scrollTop() > 200) {
+                            $('#toTop').fadeIn();            
+                            $('#toTop').css('left', $('#sidebar').offset().left);
+                        } else {
+                              $('#toTop').fadeOut();
+                        }
+                    });
+                        $("#toTop").click(function() {
+                        $('html, body').animate({
+                            scrollTop : 0
+                            }, 400);
+                        return false;
+                    });
                 });
-                    $("#toTop").click(function() {
-                    $('html, body').animate({
-                        scrollTop : 0
-                        }, 400);
-                    return false;
-                });
-            });
-        </script>
-
+            </script>
 
 <footer>
     <div id="wrapper">
