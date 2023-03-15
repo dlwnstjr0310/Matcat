@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.greedy.matcat.member.dao.MemberMapper">
+
+    <resultMap id="memberResultMap" type="com.greedy.matcat.member.dto.MemberDTO">
+        <id property="memberNo" column="MEMBER_NO"/>
+        <result property="memberId" column="MEMBER_ID"/>
+        <result property="memberPwd" column="MEMBER_PWD"/>
+        <result property="memberName" column="MEMBER_NAME"/>
+        <result property="memberEmail" column="MEMBER_EMAIL"/>
+        <result property="memberGender" column="MEMBER_GENDER"/>
+        <result property="memberAddress" column="MEMBER_ADDRESS"/>
+        <result property="memberLeaveYN" column="MEMBER_LEAVE_YN"/>
+        <result property="memberGrade" column="MEMBER_GRADE"/>
+        <collection property="memberRoleList" resultMap="authMemberResultMap"/>
+    </resultMap>
+
+    <resultMap id="authMemberResultMap" type="com.greedy.matcat.member.dto.AuthMemberDTO">
+        <id property="memberNo" column="REF_MEMBER_NO"/>
+        <id property="authorityCode" column="REF_AUTH_CODE"/>
+        <association property="authority" resultMap="authorityResultMap"/>
+    </resultMap>
+
+    <resultMap id="authorityResultMap" type="com.greedy.matcat.member.dto.AuthorityDTO">
+        <id property="authCode" column="REF_AUTH_CODE2"/>
+        <result property="authName" column="AUTH_NAME"/>
+        <result property="authExplation" column="AUTH_EXPLATION"/>
+    </resultMap>
+
+
+    <select id="memberIdCheck" resultType="string">
+        SELECT
+               MEMBER_ID
+          FROM TBL_ACCOUNT
+         WHERE MEMBER_ID = #{ memberId }
+    </select>
+
+    <select id="login" resultMap="memberResultMap">
+        SELECT
+               A.MEMBER_NO
+             , A.MEMBER_ID
+             , A.MEMBER_PWD
+             , A.MEMBER_NAME
+             , A.MEMBER_EMAIL
+             , A.MEMBER_GENDER
+             , A.MEMBER_PHONE
+             , A.MEMBER_ADDRESS
+             , A.MEMBER_LEAVE_YN
+             , A.MEMBER_GRADE
+             , B.MEMBER_NO REF_MEMBER_NO
+             , B.AUTH_CODE REF_AUTH_CODE
+             , C.AUTH_CODE REF_AUTH_CODE2
+             , C.AUTH_NAME
+             , c.AUTH_EXPLATION
+          FROM TBL_ACCOUNT A
+          LEFT JOIN TBL_AUTH_MEMBER B ON(A.MEMBER_NO = B.MEMBER_NO)
+          LEFT JOIN tbl_authority C ON (B.AUTH_CODE = C.AUTH_CODE)
+         WHERE MEMBER_ID = #{ memberId }
+    </select>
+
+</mapper>

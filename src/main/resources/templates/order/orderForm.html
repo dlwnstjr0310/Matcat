@@ -7,7 +7,7 @@
     <script src="/resource/static/js/order.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- <script>
         const message = '[[${message}]]';
 	    message && alert(message);
@@ -69,7 +69,7 @@
                     </tr>
                 </table>
                 <p class="tableheader">배송 정보<hr></p>
-                <form action="del">
+                <form action="/delivery" method="POST">
                     <table id="delivery-form">
                         <!-- 기본값으로 주소 입력되도록 -->
                         <tr>
@@ -110,10 +110,10 @@
                     <div class="paymethod">
                         <span>결제수단 선택 </span> 
                         <button type="button" name="kakao">
-                            <img src="../../static/image/kakao.png" alt="kakao">
+                            <img src="/image/kakao.png" alt="kakao">
                         </button>
                         <button type="button" name="credit">
-                            <img src="../../static/image/카드결제.png" alt="credit">
+                            <img src="/image/카드결제 (1).png" alt="credit">
                         </button>
                     </div>
                     <p class="p-font-small">
