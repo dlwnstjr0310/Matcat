@@ -12,7 +12,6 @@ target
 .factorypath
 .project
 .settings
-
 .springBeans
 .sts4-cache
 
@@ -42,5 +41,6 @@ build/
 /mvnw.cmd
 /bin/
 
+.settings
 
 /.metadata/
