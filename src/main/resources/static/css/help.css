@@ -1,0 +1,109 @@
+/* ------------------ 고객센터 부분 - 규진 -------------------- */
+
+html {
+    background-color: #FBF9F1;
+}
+#html{
+    background-color: #FBF9F1;
+    width: 100%;
+    height: 50px;
+}
+
+#help01{
+    background-color: white;
+    margin-top: 20%;
+    margin-bottom: 70%;
+    margin-right: 30%;
+    margin-left: 30%;
+    width: 50%;
+    height: 50%;
+}
+#help01table{
+    width: 100%;
+    text-align: center;
+    border-radius: 20;
+}
+
+#helphead{
+    background-color: darkgreen;
+    width: 87%;
+    height: 80px;
+    margin: auto;
+}
+.containerkj{
+    width: 100%;
+}
+
+#allthing{
+
+    height: 500px;
+}
+/* 나중에 margin값 말고 center로 보내는 법 알아내야함; */
+#searchBox{
+
+    margin-left: 5%;
+}
+#arrow{
+
+    margin-left: 0%;
+}
+/* ------------------------------------------------- */
+
+#userhelp1{
+    margin-right: 1%;
+}
+
+#button1{
+    margin-left: 0%;
+}
+
+#updatebtn{
+    margin-left: 85%;
+}
+
+#deletebtn{
+    margin-left: 1%;
+}
+
+#insertbtn{
+    margin-left: 85%;
+}
+
+#removeReplbtn{
+    margin-top: 1%;
+    margin-left: 93%;
+}
+
+#registReply{
+
+    background-color: rgba(72, 162, 77, 0.495);
+
+    color: white;
+
+}
+
+#HelpNav{
+
+    width: 220px;
+
+    height: 50px;
+
+    margin-top: 10%;
+    
+    margin-left: 10%; 	
+}
+
+#helpDesk{
+    
+    background-color: #2B7C1E;
+
+    width: 200px;
+
+    height: 70px;
+
+    text-align: center;
+
+    margin-left: 10%;
+    
+}
+

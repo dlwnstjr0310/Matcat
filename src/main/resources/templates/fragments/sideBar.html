@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="sidebarFragment">
+<link rec="stylesheet" href="../../static/css/help.css">
+	<!-- Sidebar -->
+		<div id="helpDesk" class="row rounded">
+			<h2 class="text-light mt-3">고객센터</h2>
+
+		<br><br><br><br>
+			
+		<button id="HelpNav" class="btn btn-light" style="margin-top: 5%"
+			onclick="location.href='userhelp001.html'">1:1 문의 접수</button>
+		<br>
+		<button id="HelpNav" class="btn btn-light " style="margin-top: 5%"
+			onclick="location.href='../admin/adminHelp001.html'">1:1 문의
+			내역</button>
+		<br>
+		<button id="HelpNav" class="btn btn-light" style="margin-top: 5%"
+			onclick="location.href='../admin/adminHelp001.html'">공지사항</button>
+		<br>
+		<button id="HelpNav" class="btn btn-light" style="margin-top: 5%"
+			onclick="location.href='../admin/adminHelp002.html'">자주 묻는
+			질문</button>
+		<br>
+	</div>
+	<!-- End of Sidebar -->
+
+</th:block>
+
+</html>
