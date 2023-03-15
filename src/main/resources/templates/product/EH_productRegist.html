@@ -5,8 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상품등록페이지</title>
+    <link rel="stylesheet" href="/src/main/resources/static/css/EH_css_productRegist.css">
 </head>
 <body>
+    <div th:replace="common/header.html"></div>
+    <div id="sidebar">
+		<ul>
+			<li><a href="#">Menu item 1</a></li>
+			<li><a href="#">Menu item 2</a></li>
+			<li><a href="#">Menu item 3</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<!-- 페이지 내용 작성 -->
     <div>
         <form>
             <div id="no1">
@@ -157,7 +168,9 @@
 			
 		})();
 	</script>
-
+	</div>
+    
+    <div th:replace="common/footer.html"></div>
 
 
 
