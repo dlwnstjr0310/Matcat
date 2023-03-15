@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,15 +15,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/member")
 public class MemberController {
 
-    private final JavaMailSender javaMailSender;
-    @Value("${spring.mail.username}")
-    private String from;
+//    @Value("${spring.mail.username}")
+//    private String from;
 
     private final mailService mailService;
 
     @Autowired
-    public MemberController(JavaMailSender javaMailSender, mailService mailService) {
-        this.javaMailSender = javaMailSender;
+    public MemberController(mailService mailService) {
         this.mailService = mailService;
     }
 

@@ -16,6 +16,14 @@ spring:
       max-file-size: 10MB
       max-request-size: 10MB
       location: C:/semi/MATCAT
+  mail:
+    host: smtp.naver.com
+    port: 465
+    username: lkj9676@naver.com
+    password: "!1rbwls909"
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.ssl.enable: true
 
 # image upload directory config
 image:
@@ -23,3 +31,5 @@ image:
 # mybatis config
 mybatis:
   mapper-locations: mappers/**/*.xml
+
+  
