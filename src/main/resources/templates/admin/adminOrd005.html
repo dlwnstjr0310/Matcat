@@ -7,7 +7,7 @@
 <script src="/resource/static/js/order.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../static/css/style.css">
+<link rel="stylesheet" href="../../static/css/style-003.css">
 <!-- <script>
     const message = '[[${message}]]';
     message && alert(message);
@@ -15,8 +15,35 @@
 </head>
 <body>
     <div th:replace="common/header.html"></div>
-
-
+    <div id="sidebar">
+		<ul>
+			<li id="sidebar-title">주문관리</li>
+			<li><a href="#adminOrd005">주문 내역 조회</a></li>
+			<li><a href="#adminOrd006">반품 내역 조회</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div>
+			<table id="listArea" style="text-align: center">
+                <tr>
+                    <th style="width: 100px">글번호</th>
+                    <th style="width: 100px">카테고리</th>
+                    <th style="width: 300px">글제목</th>
+                    <th style="width: 100px">작성자</th>
+                    <th style="width: 100px">조회수</th>
+                    <th style="width: 150px">작성일</th>
+                </tr>
+                <tr th:each="board : ${ boardList }"
+                    th:onclick="|location.href='/board/detail?no=${board.no}'|">
+                    <td th:text="${ board.no }"></td>
+                    <td th:text="${ board.category.name }"></td>
+                    <td th:text="${ board.title }"></td>
+                    <td th:text="${ board.writer.nickname }"></td>
+                    <td th:text="${ board.count }"></td>
+                    <td th:text="${ board.createdDate }"></td>
+                </tr>
+            </table>
+	</div>
     <div th:replace="common/footer.html"></div>
 </body>
 </html>

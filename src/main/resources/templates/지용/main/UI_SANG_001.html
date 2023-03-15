@@ -16,15 +16,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
 integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
 crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" 
+    crossorigin="anonymous"></script>
 </head>
 <body>
-    
     <header id="matcat-header">
         <h1><a id="matcat-logoname" href="UI_MAIN_001.html"><img src="../../../static/image/matcatlogo.png"></a></h1>
         <nav>
             <ul id="header-nav">
                 <li><a href="UI_MAIN_001.html">홈</a></li>
-                <li><a href="UI_MAIN_002.html">상품목록</a></li>
+                <li><a href="UI_MAIN_003.html">상품목록</a></li>
                 <li><a href="UI_HELP_001.html">고객센터</a></li>
                 <li><a href="UI_MPG_001.html">마이페이지</a></li>
                 <li id="search-box">
@@ -41,7 +44,9 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         </nav>
         </header>
 
-        <div id="whiteback">
+<a id="toTop" href="#"><img src="../../../static/image/화살표 좌.png"></a>
+
+        <div id="whiteback_head">
             
             <div id="topleft">
                 <img src="../../../static/image/부대찌개사진.png">
@@ -59,16 +64,177 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
             <div id="topright">
                 <a id="menuname">백종원식 부대찌개</a>
+                <a id="menusmallname">백종원식 부대찌개</a>
+                <div id="statusprice">    
+                    <a id="menustatus">[재고상태]</a>
+                    <a id="menuprice">9,000원</a>
+                </div>
 
+                <div id="buy">
+                    <form>
+                            <label for="sell_price">수량</label>
+                            <input type="hidden" name="sell_price" value="5500">
+                            <input type="text" name="amount" value="1" size="3" max="">
+                            <input type="button" value=" + " name ="add">
+                            <input type="button" value=" - " name ="minus">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label for="sum">총 금액</label> 
+                            <input type="text" name="sum" size="11" readonly>원
+                    </form>
+                </div>
+
+                <div id="buymenu">
+                    <button id="buymenubtn">장바구니</button>
+                    <button id="buymenubtn">바로구매</button>
+                    <button id="menuinformation">구매정보</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+        <div id="outer">
+            <div id="menu">상품 정보 더 보기</div>
+            <p class="contents"><img src="../../../static/image/제품 상세 프레임.png" width="90%"></p>
+        </div>
+
+        <script>
+            $(function(){
+                $("#menu").click(function(){
+                if($(this).next("p").css("display") === 'none') {
+                    $("p.contents").slideUp();          // 하나를 열고 다른걸 열면 자동으로 닫히면서 하나만 열리게 함
+                        $(this).next("p").slideDown();
+                } else {
+                        $(this).next("p").slideUp();  
+                }
+                });
+            });
+        </script>
+
+            <!-- 바디 끝 / 리뷰 작성공간을 알리는 선 -->
+        <hr id="bodyend">
+        
+        <div id="review_ground">
+            
+            <div id="review_head">
+                <a id="menu_review_head"><b>상품 후기</b></a>
+                <a id="picture_review"><b>사진 후기</b></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="review_picture"><img src="../../../static/image/부대찌개사진.png" width="90%"></a>
+                <a id="reviewcount">총 32개</a><br>
+                <button id="newest">최신순 &nbsp;&nbsp;</button>
+                <button id="best_sequence">추천순</button>
+
+                <div id="member_review">
+                        <a id="member_grade">회원</a>
+                        <a id="member_name">김**</a>
+                        <a id="menu_name">백종원식 부대찌개</a><br>
+                        <a id="menu_review">맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~
+                            맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~
+                            맛있어요~~맛있어요~~맛있어요~~맛있어요~~</a> <!-- 이거 안붙이면 사잔이랑 글 위치가 안맞음 >>> --><br>
+                        <!-- 이미지 공간 -->
+                        <a id="img_ground"><img src="../../../static/image/부대찌개사진.png" width="10%"></a>
+                        <a id="upload_date">업로드 날짜(23.3.15)</a>
+                        <a id="review_endline"></a><br>
+                </div>
+
+                <div id="member_review">
+                    <a id="member_grade">회원</a>
+                    <a id="member_name">김**</a>
+                    <a id="menu_name">백종원식 부대찌개</a><br>
+                    <a id="menu_review">맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~
+                        맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~맛있어요~~
+                        맛있어요~~맛있어요~~맛있어요~~</a>  <!-- 이거 안붙이면 사잔이랑 글 위치가 안맞음 >>> --><br>
+                    <!-- 이미지 공간 -->
+                    <a id="img_ground"><img src="" width="10%"></a>
+                    <a id="upload_date">업로드 날짜(23.3.15)</a>
+                    <a id="review_endline"></a><br>
+                </div>
+                
+
+                <div id="review_outer">
+                    <div id="review_addview">더 보기</div>
+                    <p class="contents">
+                        <!-- 리뷰 링크 연결? 하면 뜸-->
+                        <img src="../../../static/image/제품 상세 프레임.png" width="90%">
+                    
+                    </p>
+                </div>
+            </div>
+            
+            <script>
+                $(function(){
+                    $("#review_addview").click(function(){
+                    if($(this).next("p").css("display") === 'none') {
+                        $("p.contents").slideUp();          // 하나를 열고 다른걸 열면 자동으로 닫히면서 하나만 열리게 함
+                            $(this).next("p").slideDown();
+                    } else {
+                            $(this).next("p").slideUp();  
+                    }
+                    });
+                });
+            </script>
+
+        </div>
+
+        <div id="ect">
+
+            <div id="left_ect">
+                <a id="a1">고객행복센터</a>
+                <a id="a2">1644-1234&nbsp;&nbsp;&nbsp;&nbsp;<small>월~토요일 오전 7시-오후 6시</small></a>
+                <div id="etc_button">
+                    <button id="kakao">카카오톡 문의</button>
+                    <label>월~토요일 | 오전 7시 - 오후 6시  </label> <label> / 월~토요일 | 오전 7시 - 오후 6시</label>
+                </div>
+
+                <div id="etc_button">
+                    <button id="kakao">1대1 문의</button>
+                    <label>365일 고객센터 운영시간에 순차적으로 답변드리겠습니다</label>
+                </div>
+
+                <div id="etc_button">
+                    <button id="kakao">대량주문 문의</button>
+                    <label>월~토요일 | 오전 7시 - 오후 6시  </label> <label> / 월~토요일 | 오전 7시 - 오후 6시</label>
+                 </div>
+
+
+
+            </div>
+
+            <div id="right_ect">
+
+                
             </div>
 
 
 
         </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        
+        <!-- 탑버튼 자바스크립트 -->
+        <script>
+            $(function() {
+                 $(window).scroll(function() {
+                   if ($(this).scrollTop() > 200) {
+                        $('#toTop').fadeIn();            
+                        $('#toTop').css('left', $('#sidebar').offset().left);
+                    } else {
+                          $('#toTop').fadeOut();
+                    }
+                });
+                    $("#toTop").click(function() {
+                    $('html, body').animate({
+                        scrollTop : 0
+                        }, 400);
+                    return false;
+                });
+            });
+        </script>
 
         <footer>
             <div id="wrapper">

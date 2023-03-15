@@ -50,7 +50,6 @@ window.onload = function(){
                 .then(result => result.text())
                 .then(result => alert(result))
                 .catch((error) => error.text().then((res) => alert(res)));
-
         }
     }
 

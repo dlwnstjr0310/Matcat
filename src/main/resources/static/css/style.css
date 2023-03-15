@@ -182,4 +182,5 @@ input[name="address1"]{
     font-weight: 900;
     border-radius: 5px;
     border: none;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.568);}
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.568);
+}
