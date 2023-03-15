@@ -32,6 +32,12 @@
 
 /* 페이지 내용 스타일 */
 #content {
+    flex-direction: column;
     margin-left: 200px; /* 사이드 바 너비만큼 왼쪽 마진 추가 */
     padding: 20px;
+    background-color: white;
+}
+
+#content #id {
+    
 }

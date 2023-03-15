@@ -5,20 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상품등록페이지</title>
+
+    <!-- css -->
     <link rel="stylesheet" href="/src/main/resources/static/css/EH_css_productRegist.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+
 </head>
+
+
 <body>
+    <!-- 상단바 -->
     <div th:replace="common/header.html"></div>
+
+    <!-- 사이드바  -->
     <div id="sidebar">
 		<ul>
-			<li><a href="#">Menu item 1</a></li>
-			<li><a href="#">Menu item 2</a></li>
-			<li><a href="#">Menu item 3</a></li>
+			<li><a href="EH_productMain.html">상품 관리</a></li>
+			<li><a href="EH_productRegist.html">상품 등록</a></li>
+			<li><a href="EH_productModify.html">상품 수정</a></li>
 		</ul>
 	</div>
+    
+    <!-- 페이지 내용 작성 -->
 	<div id="content">
-		<!-- 페이지 내용 작성 -->
-    <div>
         <form>
             <div id="no1">
                 <h5>상품</h5>
@@ -38,6 +50,7 @@
                     <label for="ctgretc">기타</label>
                 </fieldset>
             </div>
+            <br>
 
             <div id="no2">
                 <h5>대표 이미지</h5>
@@ -49,52 +62,53 @@
                         <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
                     </div>                    
                 </fieldset>
-            </div>
+            </div><br>
 
+            <!-- 사진 첨부가 되지 않음 수정하기 !! -->
             <div id="no3">
                 <h5>상세정보</h5>
                 <fieldset>
                     <label for="">상세 정보 이미지</label>
-                    <div>
+                    <div class="infoimg-area">
                         <table class="prdt-detail">
                             <tr>
                                 <td>
-                                    <div class="infoimg-area">
+                                    <div>
                                         <img style="width: 120px; height: 100px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="infoimg-area">
+                                    <div>
                                         <img style="width: 120px; height: 100px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="infoimg-area">
+                                    <div>
                                         <img style="width: 120px; height: 100px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="infoimg-area">
+                                    <div>
                                         <img style="width: 120px; height: 100px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="infoimg-area">
+                                    <div>
                                         <img style="width: 120px; height: 100px;">
                                     </div>
                                 </td>
                             </tr>
+                            <div style="display: none;">
+                                <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
+                                <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
+                                <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
+                                <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
+                                <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
+                            </div>
                         </table>
-                        <div style="display: none;">
-                            <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
-                            <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
-                            <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
-                            <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
-                            <input type="file" name="attachImage" accept="image/gif,image/jpeg,image/png"> 
-                        </div>
                     </div>
                 </fieldset>
-            </div>
+            </div><br>
             
             <div id="no4">
                 <h5>가격</h5>
@@ -102,7 +116,7 @@
                     <label for="">판매가격</label><br>
                     <input type="number" name="price" min="0" max="1000000" step="1000" value="0">
                 </fieldset>
-            </div>
+            </div><br>
             
             <div id="no5">
                 <h5>재고 및 상품 상태</h5>
@@ -120,16 +134,16 @@
                 </fieldset>
             </div>
 
-            <br>
-            <div class="regist-btn">
+            <br><br><br>
+            <div id="regist-btn">
                 <button type="submit">등록</button>
                 <button type="button" onclick="location.href=''">돌아가기</button>
                 <button type="reset">취소</button>
             </div>
 
         </form>
-
     </div>
+    
 
     <script>
 		(function(){

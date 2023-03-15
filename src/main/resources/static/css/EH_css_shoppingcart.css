@@ -182,7 +182,7 @@ svg {
 }
 
 table {
-  border-collapse: collapse;
+  border-collapse: separate;
 }
 
 caption {
@@ -336,31 +336,33 @@ hr {
 
 
 
-.container,
-.container-fluid {
+#container,
+#container-fluid > .table {
+  flex-direction: column;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  padding-top: 500px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: auto;
+  margin-top: 100px;
 }
 
-.row {
+#row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
 }
 
-.con-lg-4, .col-lg-8 {
+#col-lg-4, #col-lg-8 {
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
 }
 
-.col {
+#col {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
@@ -370,18 +372,18 @@ hr {
 
 
 @media (min-width: 992px) {
-  .col-lg {
+  #col-lg {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .col-lg-4 {
+  #col-lg-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
   }
 
-  .col-lg-8 {
+  #col-lg-8 {
     flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
@@ -561,7 +563,7 @@ input[type="button"].btn-block {
 }
 
 
-.input-group {
+#input-group {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -569,10 +571,10 @@ input[type="button"].btn-block {
   width: 100%;
 }
 
-.input-group > .form-control,
-.input-group > .form-control-plaintext,
-.input-group > .custom-select,
-.input-group > .custom-file {
+#input-group > .form-control,
+#input-group > .form-control-plaintext,
+#input-group > .custom-select,
+#input-group > .custom-file {
   position: relative;
   flex: 1 1 auto;
   width: 1%;
@@ -580,72 +582,72 @@ input[type="button"].btn-block {
   margin-bottom: 0;
 }
 
-.input-group > .form-control + .form-control,
-.input-group > .form-control + .custom-select,
-.input-group > .form-control + .custom-file,
-.input-group > .form-control-plaintext + .form-control,
-.input-group > .form-control-plaintext + .custom-select,
-.input-group > .form-control-plaintext + .custom-file,
-.input-group > .custom-select + .form-control,
-.input-group > .custom-select + .custom-select,
-.input-group > .custom-select + .custom-file,
-.input-group > .custom-file + .form-control,
-.input-group > .custom-file + .custom-select,
-.input-group > .custom-file + .custom-file {
+#input-group > .form-control + .form-control,
+#input-group > .form-control + .custom-select,
+#input-group > .form-control + .custom-file,
+#input-group > .form-control-plaintext + .form-control,
+#input-group > .form-control-plaintext + .custom-select,
+#input-group > .form-control-plaintext + .custom-file,
+#input-group > .custom-select + .form-control,
+#input-group > .custom-select + .custom-select,
+#input-group > .custom-select + .custom-file,
+#input-group > .custom-file + .form-control,
+#input-group > .custom-file + .custom-select,
+#input-group > .custom-file + .custom-file {
   margin-left: -1px;
 }
 
-.input-group > .form-control:focus,
-.input-group > .custom-select:focus,
-.input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
+#input-group > .form-control:focus,
+#input-group > .custom-select:focus,
+#input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
   z-index: 3;
 }
 
-.input-group > .custom-file .custom-file-input:focus {
+#input-group > .custom-file .custom-file-input:focus {
   z-index: 4;
 }
 
-.input-group > .custom-file {
+#input-group > .custom-file {
   display: flex;
   align-items: center;
 }
 
-.input-group-prepend,
-.input-group-append {
+#input-group-prepend,
+#input-group-append {
   display: flex;
 }
 
-.input-group-prepend .btn,
-.input-group-append .btn {
+#input-group-prepend .btn,
+#input-group-append .btn {
   position: relative;
   z-index: 2;
 }
 
-.input-group-prepend .btn:focus,
-.input-group-append .btn:focus {
+#input-group-prepend .btn:focus,
+#input-group-append .btn:focus {
   z-index: 3;
 }
 
-.input-group-prepend .btn + .btn,
-.input-group-prepend .btn + .input-group-text,
-.input-group-prepend .input-group-text + .input-group-text,
-.input-group-prepend .input-group-text + .btn,
-.input-group-append .btn + .btn,
-.input-group-append .btn + .input-group-text,
-.input-group-append .input-group-text + .input-group-text,
-.input-group-append .input-group-text + .btn {
+#input-group-prepend .btn + .btn,
+#input-group-prepend .btn + #input-group-text,
+#input-group-prepend #input-group-text + #input-group-text,
+#input-group-prepend #input-group-text + .btn,
+#input-group-append .btn + .btn,
+#input-group-append .btn + #input-group-text,
+#input-group-append #input-group-text + #input-group-text,
+#input-group-append #input-group-text + .btn {
   margin-left: -1px;
 }
 
-.input-group-prepend {
+#input-group-prepend {
   margin-right: -1px;
 }
 
-.input-group-append {
+#input-group-append {
   margin-left: -1px;
 }
 
-.input-group-text {
+#input-group-text {
   display: flex;
   align-items: center;
   padding: 0.375rem 0.75rem;
@@ -660,33 +662,33 @@ input[type="button"].btn-block {
   border: 1px solid #EDF1FF;
 }
 
-.input-group-text input[type="radio"],
-.input-group-text input[type="checkbox"] {
+#input-group-text input[type="radio"],
+#input-group-text input[type="checkbox"] {
   margin-top: 0;
 }
 
-.input-group-lg > .form-control:not(textarea),
-.input-group-lg > .custom-select {
+#input-group-lg > .form-control:not(textarea),
+#input-group-lg > .custom-select {
   height: calc(1.5em + 1rem + 2px);
 }
 
-.input-group-lg > .form-control,
-.input-group-lg > .custom-select,
-.input-group-lg > .input-group-prepend > .input-group-text,
-.input-group-lg > .input-group-append > .input-group-text,
-.input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
+#input-group-lg > .form-control,
+#input-group-lg > .custom-select,
+#input-group-lg > #input-group-prepend > #input-group-text,
+#input-group-lg > #input-group-append > #input-group-text,
+#input-group-lg > #input-group-prepend > .btn,
+#input-group-lg > #input-group-append > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
 }
 
-.input-group-sm > .form-control:not(textarea),
-.input-group-sm > .custom-select {
+#input-group-sm > .form-control:not(textarea),
+#input-group-sm > .custom-select {
   height: calc(1.5em + 0.5rem + 2px);
 }
 
-.card {
+#card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -697,82 +699,82 @@ input[type="button"].btn-block {
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.card > hr {
+#card > hr {
   margin-right: 0;
   margin-left: 0;
 }
 
-.card > .list-group {
+#card > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
 
-.card > .list-group:first-child {
+#card > .list-group:first-child {
   border-top-width: 0;
 }
 
-.card > .list-group:last-child {
+#card > .list-group:last-child {
   border-bottom-width: 0;
 }
 
-.card > .card-header + .list-group,
-.card > .list-group + .card-footer {
+#card > #card-header + .list-group,
+#card > .list-group + #card-footer {
   border-top: 0;
 }
 
-.card-body {
+#card-body {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
 }
 
-.card-title {
+#card-title {
   margin-bottom: 0.75rem;
 }
 
-.card-subtitle {
+#card-subtitle {
   margin-top: -0.375rem;
   margin-bottom: 0;
 }
 
-.card-text:last-child {
+#card-text:last-child {
   margin-bottom: 0;
 }
 
-.card-link:hover {
+#card-link:hover {
   text-decoration: none;
 }
 
-.card-link + .card-link {
+#card-link + #card-link {
   margin-left: 1.25rem;
 }
 
-.card-header {
+#card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.card-footer {
+#card-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.card-header-tabs {
+#card-header-tabs {
   margin-right: -0.625rem;
   margin-bottom: -0.75rem;
   margin-left: -0.625rem;
   border-bottom: 0;
 }
 
-.card-header-pills {
+#card-header-pills {
   margin-right: -0.625rem;
   margin-left: -0.625rem;
 }
 
-.card-img-overlay {
+#card-img-overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -781,25 +783,25 @@ input[type="button"].btn-block {
   padding: 1.25rem;
 }
 
-.card-img,
-.card-img-top,
-.card-img-bottom {
-  flex-shrink: 0;
+#card-img,
+#card-img-top,
+#card-img-bottom {
+ flex-shrink: 0;
   width: 100%;
 }
 
-.card-deck .card {
+#card-deck #card {
   margin-bottom: 15px;
 }
 
 @media (min-width: 576px) {
-  .card-deck {
+  #card-deck {
     display: flex;
     flex-flow: row wrap;
     margin-right: -15px;
     margin-left: -15px;
   }
-  .card-deck .card {
+  #card-deck #card {
     flex: 1 0 0%;
     margin-right: 15px;
     margin-bottom: 0;
@@ -807,37 +809,37 @@ input[type="button"].btn-block {
   }
 }
 
-.card-group > .card {
+#card-group > #card {
   margin-bottom: 15px;
 }
 
 @media (min-width: 576px) {
-  .card-group {
+  #card-group {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card {
+  #card-group > #card {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card {
+  #card-group > #card + #card {
     margin-left: 0;
     border-left: 0;
   }
 }
 
-.card-columns .card {
+#card-columns #card {
   margin-bottom: 0.75rem;
 }
 
 @media (min-width: 576px) {
-  .card-columns {
+  #card-columns {
     column-count: 3;
     column-gap: 1.25rem;
     orphans: 1;
     widows: 1;
   }
-  .card-columns .card {
+  #card-columns #card {
     display: inline-block;
     width: 100%;
   }
@@ -872,7 +874,7 @@ button.bg-secondary:focus {
   content: "";
 }
 
-.d-flex {
+#d-flex {
   display: flex !important;
 }
 
@@ -2879,16 +2881,12 @@ a.text-dark:hover, a.text-dark:focus {
   body {
     min-width: 992px !important;
   }
-  .container {
+  #container {
     min-width: 992px !important;
   }
-  .navbar {
-    display: none;
-  }
-  .badge {
-    border: 1px solid #000;
-  }
+
   .table {
+    padding-top: 300px;
     border-collapse: collapse !important;
   }
   .table td,
