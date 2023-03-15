@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/admin")
 public class AdminController {
 
-	@GetMapping("/adminHelp001")
+	@GetMapping("adminHelp001")
 	public void adminHelp001() {}
 	
 	@GetMapping("adminHelp002")
