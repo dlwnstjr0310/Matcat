@@ -6,6 +6,9 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface MemberMapper {
 
-    String memberIdCheck(String ID);
+    String memberIdCheck(String memberId);
+    String selectMemberByEmail(String Email);
     MemberDTO login(String memberId);
+    int memberRegist(MemberDTO member);
+    int memberAuth();
 }

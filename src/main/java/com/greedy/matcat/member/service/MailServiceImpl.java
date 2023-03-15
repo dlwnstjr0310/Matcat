@@ -1,28 +1,33 @@
 package com.greedy.matcat.member.service;
 
 import com.greedy.matcat.member.dto.MailDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
 
 @Service
-public class mailServiceImpl implements mailService {
+@Slf4j
+public class MailServiceImpl implements MailService {
 
     private final JavaMailSenderImpl mailSender;
 
-    public mailServiceImpl(JavaMailSenderImpl mailSender) {
+    public MailServiceImpl(JavaMailSenderImpl mailSender) {
+        log.info("값이 들어오나요 ? : {} " , mailSender);
         this.mailSender = mailSender;
     }
 
+
     @Override
-    public MailDTO createMailAndChangePassword(String Email) {
+    public MailDTO createMailAndChangePassword(String memberEmail) {
         String pass = getTempPassword();
         MailDTO mail = new MailDTO();
-        mail.setAddress(Email);
+        mail.setAddress(memberEmail);
         mail.setTitle("임시비밀번호 안내 이메일 입니다.");
         mail.setMessage("안녕하세요. 임시비밀번호 안내 관련 이메일 입니다." + " 회원님의 임시 비밀번호는 "
                 + pass + " 입니다." + "로그인 후에 비밀번호를 변경을 해주세요");
-        updatePassword(pass,Email);
+        updatePassword(pass,memberEmail);
         return mail;
     }
 
@@ -34,7 +39,8 @@ public class mailServiceImpl implements mailService {
         message.setText(mail.getMessage());
         message.setFrom("dlwnstjr0310@naver.com");
         message.setReplyTo("dlwnstjr0310@naver.com");
-        System.out.println("message"+message);
+        log.info("message : {} ", message);
+        log.info("mailSender : {} ", mailSender);
         mailSender.send(message);
     }
 
@@ -55,8 +61,8 @@ public class mailServiceImpl implements mailService {
     }
 
     @Override
-    public void updatePassword(String str, String str2) {
-//        String memberPassword = str;
+    public void updatePassword(String pass, String email) {
+//        String memberPassword = pass;
 //        Long memberId = mr.findByMemberEmail(userEmail).getId();
 //        mmr.updatePassword(memberId,memberPassword);
     }

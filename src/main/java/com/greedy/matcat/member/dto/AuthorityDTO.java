@@ -7,6 +7,6 @@ public class AuthorityDTO {
 
     private int authCode;
     private String authName;
-    private String authExplation;
+    private String authExplanation;
 
 }

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	 <script type="text/javascript" src="/js/findPWD.js"></script>
 	<link rel="stylesheet" href="/css/findPWD.css">
-	<title>findId</title>
+	<title>findPWD</title>
 </head>
 <body class="container">
 	<div th:replace="/member/header.html"></div>
@@ -14,7 +14,7 @@
 			<table id="text-box">
 				<tr class="id">
 					<th>
-						<label class="text" name="memberId">아이디</label>
+						<label class="text">아이디</label>
 					</th>
 					<td>
 						<input type="text" name="memberId" class="idInsert" id="memberId">
@@ -33,15 +33,14 @@
 						<label class="text">전화번호</label>
 					</th>
 					<td>
-						<input type="text" name="Phone" class="phoneInsert" id="Phone">
+						<input type="text" name="memberPhone" class="phoneInsert" id="memberPhone">
 					</td>
 				</tr>
 				<tr class="email">
 					<th>
 						<label class="text">이메일</label>
 					</th>
-					<td>
-						<input type="email" name="Email" class="emailInsert" id="Email">
+					<td><input type="email" name="memberEmail" class="emailInsert" id="memberEmail" required></td>
 					<td style="padding-left:10px"><input type="button" value="이메일 주소 확인" id="doubleCheck"></td>
 				</tr>
 				<div id="centerplz">

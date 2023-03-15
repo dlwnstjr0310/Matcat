@@ -46,10 +46,10 @@ window.onload = function(){
                 method: "POST",
                 headers: {'Content-Type': 'application/json;charset=UTF-8'},
                 body: JSON.stringify({memberId})
-            })
-                .then(result => result.text())
-                .then(result => alert(result))
-                .catch((error) => error.text().then((res) => alert(res)));
+        })
+            .then(result => result.text())
+            .then(result => alert(result))
+            .catch((error) => error.text().then((res) => alert(res)));
         }
     }
 

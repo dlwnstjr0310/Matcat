@@ -11,6 +11,7 @@
         <result property="memberName" column="MEMBER_NAME"/>
         <result property="memberEmail" column="MEMBER_EMAIL"/>
         <result property="memberGender" column="MEMBER_GENDER"/>
+        <result property="memberPhone" column="MEMBER_PHONE"/>
         <result property="memberAddress" column="MEMBER_ADDRESS"/>
         <result property="memberLeaveYN" column="MEMBER_LEAVE_YN"/>
         <result property="memberGrade" column="MEMBER_GRADE"/>
@@ -26,7 +27,7 @@
     <resultMap id="authorityResultMap" type="com.greedy.matcat.member.dto.AuthorityDTO">
         <id property="authCode" column="REF_AUTH_CODE2"/>
         <result property="authName" column="AUTH_NAME"/>
-        <result property="authExplation" column="AUTH_EXPLATION"/>
+        <result property="authExplanation" column="AUTH_EXPLANATION"/>
     </resultMap>
 
 
@@ -53,11 +54,60 @@
              , B.AUTH_CODE REF_AUTH_CODE
              , C.AUTH_CODE REF_AUTH_CODE2
              , C.AUTH_NAME
-             , c.AUTH_EXPLATION
+             , c.AUTH_EXPLANATION
           FROM TBL_ACCOUNT A
           LEFT JOIN TBL_AUTH_MEMBER B ON(A.MEMBER_NO = B.MEMBER_NO)
           LEFT JOIN tbl_authority C ON (B.AUTH_CODE = C.AUTH_CODE)
          WHERE MEMBER_ID = #{ memberId }
     </select>
+
+    <select id="selectMemberByEmail" resultType="string">
+        SELECT
+               MEMBER_ID
+          FROM TBL_ACCOUNT
+         WHERE MEMBER_EMAIL = #{ memberEmail }
+    </select>
+
+    <insert id="memberRegist">
+        INSERT INTO TBL_ACCOUNT
+        (
+         MEMBER_NO,
+         MEMBER_ID,
+         MEMBER_PWD,
+         MEMBER_NAME,
+         MEMBER_EMAIL,
+         MEMBER_GENDER,
+         MEMBER_PHONE,
+         MEMBER_ADDRESS,
+         MEMBER_LEAVE_YN,
+         MEMBER_GRADE
+         )
+        VALUES
+        (
+         SEQ_MEMBER_NO.NEXTVAL,
+         #{memberId},
+         #{memberPwd },
+         #{memberName},
+         #{memberEmail},
+         #{memberGender},
+         #{memberPhone},
+         #{memberAddress},
+         'N',
+         'USER'
+         )
+    </insert>
+    <insert id="memberAuth">
+        INSERT INTO TBL_AUTH_MEMBER
+        (
+            MEMBER_NO,
+            AUTH_CODE
+        )
+        VALUES
+        (
+          SEQ_MEMBER_NO.CURRVAL,
+          1
+        )
+    </insert>
+
 
 </mapper>
