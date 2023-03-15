@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head th:fragment="mainHeader">
+    ...Title 등의 헤더 코드 넣기
+</head>
+<body>
+<div class="container-fluid">
+
+    <!--상단 바 -->
+	..필요한 코드 넣기
+
+    <!--사이드 바-->
+	..필요한 코드 넣기
+
+    <div layout:fragment="content">
+        공통 레이아웃
+    </div>
+
+</div>
+</body>
+</html>

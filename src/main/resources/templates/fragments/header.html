@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<th:block th:fragment="headFragment">
+	<link rel="stylesheet" href="/css/matcat.css">
+	<!-- Topbar -->
+	<nav>
+		<ul id="header-nav">
+			<li><a href="UI_MAIN_001.html">홈</a></li>
+			<li><a href="UI_MAIN_002.html">상품목록</a></li>
+			<li><a href="UI_HELP_001.html">고객센터</a></li>
+			<li><a href="UI_MPG_001.html">마이페이지</a></li>
+			<li id="search-box">
+				<form action="." method="post">
+					<input id="search-txt" type="text" placeholder="검색...">
+					<button class="search-btn" type="submit">
+						<i class="fas fa-search"></i>
+					</button>
+				</form>
+			</li>
+			<li><a href="UI_JOIN_002.html">로그인</a></li>
+			<a id="jangi" href="UI_MAIN_004.html"><img
+				src="/image/장바구니아이콘.png" value="1"></a>
+		</ul>
+	</nav>
+	<!-- End of Topbar -->
+
+</th:block>
+</html>
