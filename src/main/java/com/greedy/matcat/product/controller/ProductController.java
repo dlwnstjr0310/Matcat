@@ -24,18 +24,18 @@ public class ProductController {
 		this.productService = productService;
 	}
 
-	@GetMapping("/list")
-	public String productList(@RequestParam(defaultValue="1") int page,
-			@RequestParam(required=false) String searchCondition,
-			@RequestParam(required=false) String searchValue,
-			Model model) {
-		
-		log.info("[ProductController] page :{}", page);
-		
-		Map<String, String> searchMap = new HashMap<>();
-		
-		
-	}
+//	@GetMapping("/list")
+//	public String productList(@RequestParam(defaultValue="1") int page,
+//			@RequestParam(required=false) String searchCondition,
+//			@RequestParam(required=false) String searchValue,
+//			Model model) {
+//		
+//		log.info("[ProductController] page :{}", page);
+//		
+//		Map<String, String> searchMap = new HashMap<>();
+//		
+//		
+//	}
 
 	
 }
