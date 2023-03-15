@@ -12,6 +12,7 @@ target
 .factorypath
 .project
 .settings
+
 .springBeans
 .sts4-cache
 
@@ -44,5 +45,5 @@ build/
 /README.md
 
 
-/.metadata/
+.metadata
 
